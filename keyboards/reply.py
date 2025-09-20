@@ -170,7 +170,8 @@ def get_admin_keyboard() -> ReplyKeyboardMarkup:
             [KeyboardButton(text="📊 إحصائيات"), KeyboardButton(text="👥 المستخدمين")],
             [KeyboardButton(text=f"{deposits_emoji} طلبات الإيداع"), KeyboardButton(text="📢 إرسال إشعار")],
             [KeyboardButton(text="📦 الطلبات"), KeyboardButton(text="🔄 مزامنة الخدمات")],
-            [KeyboardButton(text="🏆 إدارة الرتب"), KeyboardButton(text="⚙️ الإعدادات")],
+            [KeyboardButton(text="🏆 إدارة الرتب"), KeyboardButton(text="💰 إدارة التسعير")],
+            [KeyboardButton(text="🛍️ إدارة الخدمات"), KeyboardButton(text="⚙️ الإعدادات")],
             [KeyboardButton(text="🔙 العودة للوضع العادي")]
         ]
         
@@ -187,7 +188,8 @@ def get_admin_keyboard() -> ReplyKeyboardMarkup:
             [KeyboardButton(text="📊 إحصائيات"), KeyboardButton(text="👥 المستخدمين")],
             [KeyboardButton(text="💰 طلبات الإيداع"), KeyboardButton(text="📢 إرسال إشعار")],
             [KeyboardButton(text="📦 الطلبات"), KeyboardButton(text="🔄 مزامنة الخدمات")],
-            [KeyboardButton(text="🏆 إدارة الرتب"), KeyboardButton(text="⚙️ الإعدادات")],
+            [KeyboardButton(text="🏆 إدارة الرتب"), KeyboardButton(text="💰 إدارة التسعير")],
+            [KeyboardButton(text="🛍️ إدارة الخدمات"), KeyboardButton(text="⚙️ الإعدادات")],
             [KeyboardButton(text="🔙 العودة للوضع العادي")]
         ]
         

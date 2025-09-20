@@ -51,3 +51,12 @@ class AdminState(StatesGroup):
     editing_rank_name = State()   # تعديل اسم الرتبة
     editing_rank_features = State() # تعديل مميزات الرتبة
     syncing_services = State()    # مزامنة الخدمات
+    
+    # إدارة التسعير
+    adding_pricing_rule = State() # إضافة قاعدة تسعير
+    editing_pricing_rule = State() # تعديل قاعدة تسعير
+    
+    # إدارة الخدمات والفئات
+    managing_services = State()   # إدارة الخدمات
+    adding_category = State()     # إضافة فئة
+    editing_service = State()     # تعديل خدمة

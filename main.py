@@ -67,6 +67,10 @@ async def main():
         dp.include_router(admin_router)
         dp.include_router(user_router)
         
+        # إضافة موجه التسعير
+        from handlers import pricing_router
+        dp.include_router(pricing_router)
+        
         # بدء مهمة تحديث حالة الطلبات
         logger.info("جاري بدء مهمة تحديث حالة الطلبات...")
         await start_order_updater()
