@@ -1,0 +1,1790 @@
+2025-04-02 21:58:58,175 - smm_bot - INFO - تم تهيئة قاعدة البيانات الأساسية بنجاح
+2025-04-02 21:58:58,191 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-02 21:58:58,191 - smm_bot - INFO - تم إعداد الوسائط بنجاح
+2025-04-02 21:58:58,191 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-02 21:58:58,192 - aiogram.dispatcher - INFO - Start polling
+2025-04-02 21:58:58,549 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-02 21:58:58,691 - aiogram.event - INFO - Update id=190428494 is not handled. Duration 1 ms by bot id=7209041503
+2025-04-02 21:58:58,694 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-02 21:58:58,695 - smm_bot - ERROR - خطأ في حفظ معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-02 21:58:58,699 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-02 21:58:59,156 - aiogram.event - INFO - Update id=190428495 is handled. Duration 465 ms by bot id=7209041503
+2025-04-02 21:59:23,393 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-02 21:59:23,394 - smm_bot - ERROR - خطأ في حفظ معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-02 21:59:23,394 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-02 21:59:23,599 - aiogram.event - INFO - Update id=190428496 is handled. Duration 207 ms by bot id=7209041503
+2025-04-02 21:59:38,969 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-02 21:59:38,970 - smm_bot - ERROR - خطأ في حفظ معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-02 21:59:38,971 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-02 21:59:39,125 - aiogram.event - INFO - Update id=190428497 is handled. Duration 156 ms by bot id=7209041503
+2025-04-02 21:59:51,320 - aiogram.event - INFO - Update id=190428498 is handled. Duration 162 ms by bot id=7209041503
+2025-04-02 21:59:54,646 - aiogram.event - INFO - Update id=190428499 is handled. Duration 419 ms by bot id=7209041503
+2025-04-02 21:59:58,641 - aiogram.event - INFO - Update id=190428500 is handled. Duration 436 ms by bot id=7209041503
+2025-04-02 21:59:59,976 - aiogram.event - INFO - Update id=190428501 is handled. Duration 356 ms by bot id=7209041503
+2025-04-02 22:00:02,685 - aiogram.event - INFO - Update id=190428502 is handled. Duration 421 ms by bot id=7209041503
+2025-04-02 22:00:04,360 - aiogram.event - INFO - Update id=190428503 is handled. Duration 429 ms by bot id=7209041503
+2025-04-02 22:00:06,195 - aiogram.event - INFO - Update id=190428504 is handled. Duration 298 ms by bot id=7209041503
+2025-04-02 22:00:08,265 - aiogram.event - INFO - Update id=190428505 is handled. Duration 333 ms by bot id=7209041503
+2025-04-02 22:00:10,856 - aiogram.event - INFO - Update id=190428506 is handled. Duration 288 ms by bot id=7209041503
+2025-04-02 22:00:14,468 - aiogram.event - INFO - Update id=190428507 is handled. Duration 349 ms by bot id=7209041503
+2025-04-02 22:00:21,507 - aiogram.event - INFO - Update id=190428508 is not handled. Duration 1 ms by bot id=7209041503
+2025-04-02 22:00:21,508 - aiogram.event - ERROR - Cause exception while process update id=190428508 by bot id=7209041503
+TypeError: get_back_button() missing 1 required positional argument: 'callback_data'
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/utils/middleware.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/user.py", line 473, in handle_my_balance
+    reply_markup=inline.get_back_button()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_back_button() missing 1 required positional argument: 'callback_data'
+2025-04-02 23:38:03,442 - smm_bot - INFO - تم تهيئة قاعدة البيانات الأساسية بنجاح
+2025-04-02 23:38:03,448 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-02 23:38:03,449 - smm_bot - INFO - تم إعداد الوسائط بنجاح
+2025-04-02 23:38:03,449 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-02 23:38:03,450 - aiogram.dispatcher - INFO - Start polling
+2025-04-02 23:38:03,811 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-02 23:38:17,132 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-04-02 23:38:17,132 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-02 23:38:17,133 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-02 23:41:45,310 - smm_bot - INFO - تم تهيئة قاعدة البيانات الأساسية بنجاح
+2025-04-02 23:41:45,314 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-02 23:41:45,314 - smm_bot - INFO - تم إعداد الوسائط بنجاح
+2025-04-02 23:41:45,314 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-02 23:41:45,315 - aiogram.dispatcher - INFO - Start polling
+2025-04-02 23:41:45,674 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-02 23:42:17,919 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-02 23:42:17,921 - smm_bot - ERROR - خطأ في حفظ معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-02 23:42:17,923 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-02 23:42:18,305 - aiogram.event - INFO - Update id=190428509 is handled. Duration 387 ms by bot id=7209041503
+2025-04-02 23:42:40,163 - aiogram.event - INFO - Update id=190428510 is handled. Duration 347 ms by bot id=7209041503
+2025-04-02 23:42:45,013 - aiogram.event - INFO - Update id=190428511 is handled. Duration 279 ms by bot id=7209041503
+2025-04-02 23:46:04,246 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-04-02 23:46:04,249 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-02 23:46:04,249 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-02 23:46:09,586 - smm_bot - INFO - تم تهيئة قاعدة البيانات الأساسية بنجاح
+2025-04-02 23:46:09,587 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-02 23:46:09,587 - smm_bot - INFO - تم إعداد الوسائط بنجاح
+2025-04-02 23:46:09,588 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-02 23:46:09,588 - aiogram.dispatcher - INFO - Start polling
+2025-04-02 23:46:09,943 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-02 23:46:25,898 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-02 23:46:25,899 - smm_bot - ERROR - خطأ في حفظ معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-02 23:46:25,900 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-02 23:46:26,280 - aiogram.event - INFO - Update id=190428512 is handled. Duration 383 ms by bot id=7209041503
+2025-04-02 23:46:41,882 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-02 23:46:41,883 - smm_bot - ERROR - خطأ في حفظ معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-02 23:46:41,886 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-02 23:46:42,079 - aiogram.event - INFO - Update id=190428513 is handled. Duration 197 ms by bot id=7209041503
+2025-04-02 23:50:17,880 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-04-02 23:50:17,881 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-02 23:50:17,881 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-03 00:38:03,639 - smm_bot - INFO - تم تهيئة قاعدة البيانات الأساسية بنجاح
+2025-04-03 00:38:03,647 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 00:38:03,647 - smm_bot - INFO - تم إعداد الوسائط بنجاح
+2025-04-03 00:38:03,647 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-03 00:38:03,648 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 00:38:04,346 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 00:38:15,578 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 00:38:15,580 - smm_bot - ERROR - خطأ في حفظ معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 00:38:15,582 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 00:38:15,996 - aiogram.event - INFO - Update id=190428514 is handled. Duration 420 ms by bot id=7209041503
+2025-04-03 00:38:24,999 - aiogram.event - INFO - Update id=190428515 is handled. Duration 144 ms by bot id=7209041503
+2025-04-03 00:38:31,969 - aiogram.event - INFO - Update id=190428516 is handled. Duration 302 ms by bot id=7209041503
+2025-04-03 00:38:35,862 - aiogram.event - INFO - Update id=190428517 is handled. Duration 287 ms by bot id=7209041503
+2025-04-03 00:38:37,785 - aiogram.event - INFO - Update id=190428518 is handled. Duration 317 ms by bot id=7209041503
+2025-04-03 00:38:40,403 - aiogram.event - INFO - Update id=190428519 is handled. Duration 253 ms by bot id=7209041503
+2025-04-03 00:38:42,220 - aiogram.event - INFO - Update id=190428520 is handled. Duration 277 ms by bot id=7209041503
+2025-04-03 00:38:44,210 - aiogram.event - INFO - Update id=190428521 is handled. Duration 335 ms by bot id=7209041503
+2025-04-03 00:38:46,147 - aiogram.event - INFO - Update id=190428522 is handled. Duration 249 ms by bot id=7209041503
+2025-04-03 00:39:16,879 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 00:39:16,882 - smm_bot - ERROR - خطأ في حفظ معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 00:39:16,883 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 00:39:17,030 - aiogram.event - INFO - Update id=190428523 is handled. Duration 151 ms by bot id=7209041503
+2025-04-03 00:39:21,239 - aiogram.event - INFO - Update id=190428524 is handled. Duration 132 ms by bot id=7209041503
+2025-04-03 00:39:26,603 - aiogram.event - INFO - Update id=190428525 is handled. Duration 150 ms by bot id=7209041503
+2025-04-03 00:39:34,228 - aiogram.event - INFO - Update id=190428526 is handled. Duration 153 ms by bot id=7209041503
+2025-04-03 00:39:39,242 - aiogram.event - INFO - Update id=190428527 is handled. Duration 143 ms by bot id=7209041503
+2025-04-03 00:39:43,292 - aiogram.event - INFO - Update id=190428528 is handled. Duration 197 ms by bot id=7209041503
+2025-04-03 00:39:47,503 - aiogram.event - INFO - Update id=190428529 is handled. Duration 132 ms by bot id=7209041503
+2025-04-03 00:39:55,012 - aiogram.event - INFO - Update id=190428530 is handled. Duration 136 ms by bot id=7209041503
+2025-04-03 00:40:05,247 - aiogram.event - INFO - Update id=190428531 is handled. Duration 143 ms by bot id=7209041503
+2025-04-03 00:40:44,397 - aiogram.event - INFO - Update id=190428532 is handled. Duration 145 ms by bot id=7209041503
+2025-04-03 00:40:58,700 - aiogram.event - INFO - Update id=190428533 is handled. Duration 153 ms by bot id=7209041503
+2025-04-03 00:41:10,235 - aiogram.event - INFO - Update id=190428534 is not handled. Duration 119 ms by bot id=7209041503
+2025-04-03 00:41:10,235 - aiogram.event - ERROR - Cause exception while process update id=190428534 by bot id=7209041503
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/utils/middleware.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/user.py", line 1141, in handle_confirmation
+    await callback.message.edit_text(
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/bot.py", line 453, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+2025-04-03 00:41:24,093 - aiogram.event - INFO - Update id=190428535 is not handled. Duration 120 ms by bot id=7209041503
+2025-04-03 00:41:24,093 - aiogram.event - ERROR - Cause exception while process update id=190428535 by bot id=7209041503
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/utils/middleware.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/user.py", line 1141, in handle_confirmation
+    await callback.message.edit_text(
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/bot.py", line 453, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+2025-04-03 00:41:27,991 - aiogram.event - INFO - Update id=190428536 is not handled. Duration 119 ms by bot id=7209041503
+2025-04-03 00:41:27,991 - aiogram.event - ERROR - Cause exception while process update id=190428536 by bot id=7209041503
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/utils/middleware.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/user.py", line 1141, in handle_confirmation
+    await callback.message.edit_text(
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/bot.py", line 453, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+2025-04-03 00:41:30,452 - aiogram.event - INFO - Update id=190428537 is handled. Duration 266 ms by bot id=7209041503
+2025-04-03 00:41:33,980 - aiogram.event - INFO - Update id=190428538 is not handled. Duration 118 ms by bot id=7209041503
+2025-04-03 00:41:33,980 - aiogram.event - ERROR - Cause exception while process update id=190428538 by bot id=7209041503
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/utils/middleware.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/user.py", line 991, in handle_back_to_main
+    await callback.message.edit_text(
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/bot.py", line 453, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+2025-04-03 00:41:37,487 - aiogram.event - INFO - Update id=190428539 is not handled. Duration 2 ms by bot id=7209041503
+2025-04-03 00:42:06,340 - aiogram.event - INFO - Update id=190428540 is not handled. Duration 2 ms by bot id=7209041503
+2025-04-03 00:42:08,506 - aiogram.event - INFO - Update id=190428541 is not handled. Duration 116 ms by bot id=7209041503
+2025-04-03 00:42:08,506 - aiogram.event - ERROR - Cause exception while process update id=190428541 by bot id=7209041503
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/utils/middleware.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/user.py", line 991, in handle_back_to_main
+    await callback.message.edit_text(
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/bot.py", line 453, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+2025-04-03 00:42:09,951 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 00:42:09,952 - smm_bot - ERROR - خطأ في حفظ معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 00:42:09,953 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 00:42:10,106 - aiogram.event - INFO - Update id=190428542 is handled. Duration 156 ms by bot id=7209041503
+2025-04-03 00:42:13,620 - aiogram.event - INFO - Update id=190428543 is handled. Duration 138 ms by bot id=7209041503
+2025-04-03 00:42:20,244 - aiogram.event - INFO - Update id=190428544 is handled. Duration 139 ms by bot id=7209041503
+2025-04-03 00:42:26,305 - aiogram.event - INFO - Update id=190428545 is handled. Duration 132 ms by bot id=7209041503
+2025-04-03 00:43:56,154 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 00:43:56,155 - smm_bot - ERROR - خطأ في حفظ معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 00:43:56,157 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 00:43:56,300 - aiogram.event - INFO - Update id=190428546 is handled. Duration 146 ms by bot id=7209041503
+2025-04-03 00:44:00,518 - aiogram.event - INFO - Update id=190428547 is handled. Duration 171 ms by bot id=7209041503
+2025-04-03 00:44:06,285 - aiogram.event - INFO - Update id=190428548 is handled. Duration 133 ms by bot id=7209041503
+2025-04-03 00:48:44,210 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-04-03 00:48:44,211 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 00:48:44,211 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-03 00:48:49,611 - smm_bot - INFO - تم تهيئة قاعدة البيانات الأساسية بنجاح
+2025-04-03 00:48:49,613 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 00:48:49,613 - smm_bot - INFO - تم إعداد الوسائط بنجاح
+2025-04-03 00:48:49,613 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-03 00:48:49,614 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 00:48:49,972 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 00:49:10,385 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 00:49:10,400 - smm_bot - ERROR - خطأ في حفظ معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 00:49:10,401 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 00:49:10,784 - aiogram.event - INFO - Update id=190428549 is handled. Duration 406 ms by bot id=7209041503
+2025-04-03 00:49:13,187 - aiogram.event - INFO - Update id=190428550 is handled. Duration 137 ms by bot id=7209041503
+2025-04-03 00:49:18,393 - aiogram.event - INFO - Update id=190428551 is handled. Duration 183 ms by bot id=7209041503
+2025-04-03 00:49:20,621 - aiogram.event - INFO - Update id=190428552 is handled. Duration 138 ms by bot id=7209041503
+2025-04-03 00:49:23,839 - aiogram.event - INFO - Update id=190428553 is handled. Duration 146 ms by bot id=7209041503
+2025-04-03 00:49:26,037 - aiogram.event - INFO - Update id=190428554 is handled. Duration 164 ms by bot id=7209041503
+2025-04-03 00:55:15,817 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-04-03 00:55:15,819 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 00:55:15,819 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-03 00:55:28,424 - smm_bot - INFO - تم تهيئة قاعدة البيانات الأساسية بنجاح
+2025-04-03 00:55:28,425 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 00:55:28,426 - smm_bot - INFO - تم إعداد الوسائط بنجاح
+2025-04-03 00:55:28,426 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-03 00:55:28,427 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 00:55:28,782 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 00:55:44,278 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 00:55:44,279 - smm_bot - ERROR - خطأ في حفظ معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 00:55:44,280 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 00:55:44,654 - aiogram.event - INFO - Update id=190428555 is handled. Duration 378 ms by bot id=7209041503
+2025-04-03 00:55:48,165 - aiogram.event - INFO - Update id=190428556 is handled. Duration 135 ms by bot id=7209041503
+2025-04-03 00:55:51,024 - aiogram.event - INFO - Update id=190428557 is handled. Duration 147 ms by bot id=7209041503
+2025-04-03 00:55:54,143 - aiogram.event - INFO - Update id=190428558 is handled. Duration 131 ms by bot id=7209041503
+2025-04-03 00:55:57,004 - aiogram.event - INFO - Update id=190428559 is handled. Duration 134 ms by bot id=7209041503
+2025-04-03 00:56:06,772 - aiogram.event - INFO - Update id=190428560 is handled. Duration 142 ms by bot id=7209041503
+2025-04-03 00:56:11,620 - aiogram.event - INFO - Update id=190428561 is handled. Duration 273 ms by bot id=7209041503
+2025-04-03 00:56:14,344 - aiogram.event - INFO - Update id=190428562 is handled. Duration 156 ms by bot id=7209041503
+2025-04-03 01:02:41,520 - aiogram.event - INFO - Update id=190428563 is handled. Duration 169 ms by bot id=7209041503
+2025-04-03 01:02:45,701 - aiogram.event - INFO - Update id=190428564 is handled. Duration 259 ms by bot id=7209041503
+2025-04-03 01:02:47,909 - aiogram.event - INFO - Update id=190428565 is handled. Duration 136 ms by bot id=7209041503
+2025-04-03 01:02:52,709 - aiogram.event - INFO - Update id=190428566 is handled. Duration 133 ms by bot id=7209041503
+2025-04-03 01:03:03,984 - aiogram.event - INFO - Update id=190428567 is handled. Duration 157 ms by bot id=7209041503
+2025-04-03 01:03:10,125 - aiogram.event - INFO - Update id=190428568 is handled. Duration 144 ms by bot id=7209041503
+2025-04-03 01:03:14,208 - aiogram.event - INFO - Update id=190428569 is handled. Duration 135 ms by bot id=7209041503
+2025-04-03 01:03:16,761 - aiogram.event - INFO - Update id=190428570 is handled. Duration 134 ms by bot id=7209041503
+2025-04-03 01:03:20,272 - aiogram.event - INFO - Update id=190428571 is handled. Duration 269 ms by bot id=7209041503
+2025-04-03 01:03:22,942 - aiogram.event - INFO - Update id=190428572 is handled. Duration 313 ms by bot id=7209041503
+2025-04-03 01:04:11,085 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-04-03 01:04:11,086 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 01:04:11,086 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-03 01:04:19,229 - smm_bot - INFO - تم تهيئة قاعدة البيانات الأساسية بنجاح
+2025-04-03 01:04:19,231 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 01:04:19,231 - smm_bot - INFO - تم إعداد الوسائط بنجاح
+2025-04-03 01:04:19,231 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-03 01:04:19,232 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 01:04:19,599 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 01:04:48,298 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 01:04:48,300 - smm_bot - ERROR - خطأ في حفظ معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 01:04:48,301 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 01:04:48,697 - aiogram.event - INFO - Update id=190428573 is handled. Duration 400 ms by bot id=7209041503
+2025-04-03 01:04:50,726 - aiogram.event - INFO - Update id=190428574 is handled. Duration 146 ms by bot id=7209041503
+2025-04-03 01:04:53,108 - aiogram.event - INFO - Update id=190428575 is handled. Duration 155 ms by bot id=7209041503
+2025-04-03 01:04:55,108 - aiogram.event - INFO - Update id=190428576 is handled. Duration 148 ms by bot id=7209041503
+2025-04-03 01:04:59,710 - aiogram.event - INFO - Update id=190428577 is handled. Duration 130 ms by bot id=7209041503
+2025-04-03 01:05:04,075 - aiogram.event - INFO - Update id=190428578 is handled. Duration 325 ms by bot id=7209041503
+2025-04-03 01:05:43,978 - aiogram.event - INFO - Update id=190428579 is handled. Duration 257 ms by bot id=7209041503
+2025-04-03 01:10:18,995 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-04-03 01:10:18,996 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 01:10:18,996 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-03 01:10:25,768 - smm_bot - INFO - تم تهيئة قاعدة البيانات الأساسية بنجاح
+2025-04-03 01:10:25,769 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 01:10:25,770 - smm_bot - INFO - تم إعداد الوسائط بنجاح
+2025-04-03 01:10:25,770 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-03 01:10:25,771 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 01:10:26,125 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 01:10:50,525 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 01:10:50,527 - smm_bot - ERROR - خطأ في حفظ معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 01:10:50,529 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 01:10:51,053 - aiogram.event - INFO - Update id=190428580 is handled. Duration 528 ms by bot id=7209041503
+2025-04-03 01:10:57,221 - aiogram.event - INFO - Update id=190428581 is handled. Duration 135 ms by bot id=7209041503
+2025-04-03 01:11:07,995 - aiogram.event - INFO - Update id=190428582 is not handled. Duration 2 ms by bot id=7209041503
+2025-04-03 01:11:13,162 - aiogram.event - INFO - Update id=190428583 is not handled. Duration 1 ms by bot id=7209041503
+2025-04-03 01:11:16,400 - aiogram.event - INFO - Update id=190428584 is not handled. Duration 1 ms by bot id=7209041503
+2025-04-03 01:11:18,785 - aiogram.event - INFO - Update id=190428585 is not handled. Duration 2 ms by bot id=7209041503
+2025-04-03 01:12:03,927 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 01:12:03,928 - smm_bot - ERROR - خطأ في حفظ معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 01:12:03,929 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 01:12:04,301 - aiogram.event - INFO - Update id=190428586 is handled. Duration 377 ms by bot id=7209041503
+2025-04-03 01:12:07,960 - aiogram.event - INFO - Update id=190428587 is not handled. Duration 1 ms by bot id=7209041503
+2025-04-03 01:12:11,022 - aiogram.event - INFO - Update id=190428588 is not handled. Duration 1 ms by bot id=7209041503
+2025-04-03 01:12:11,928 - aiogram.event - INFO - Update id=190428589 is not handled. Duration 1 ms by bot id=7209041503
+2025-04-03 01:12:12,745 - aiogram.event - INFO - Update id=190428590 is not handled. Duration 1 ms by bot id=7209041503
+2025-04-03 01:14:31,153 - aiogram.event - INFO - Update id=190428591 is handled. Duration 267 ms by bot id=7209041503
+2025-04-03 01:14:35,678 - aiogram.event - INFO - Update id=190428592 is handled. Duration 257 ms by bot id=7209041503
+2025-04-03 01:14:50,748 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-04-03 01:14:50,749 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 01:14:50,750 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-03 01:14:55,801 - smm_bot - INFO - تم تهيئة قاعدة البيانات الأساسية بنجاح
+2025-04-03 01:14:55,803 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 01:14:55,803 - smm_bot - INFO - تم إعداد الوسائط بنجاح
+2025-04-03 01:14:55,803 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-03 01:14:55,804 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 01:14:56,156 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 01:15:20,699 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 01:15:20,702 - smm_bot - ERROR - خطأ في حفظ معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 01:15:20,703 - smm_bot - ERROR - خطأ في الحصول على معلومات المستخدم: Error binding parameter 1: type 'Message' is not supported
+2025-04-03 01:15:21,279 - aiogram.event - INFO - Update id=190428593 is handled. Duration 581 ms by bot id=7209041503
+2025-04-03 01:15:28,595 - aiogram.event - INFO - Update id=190428594 is handled. Duration 153 ms by bot id=7209041503
+2025-04-03 01:15:34,376 - aiogram.event - INFO - Update id=190428595 is not handled. Duration 3 ms by bot id=7209041503
+2025-04-03 01:15:42,421 - aiogram.event - INFO - Update id=190428596 is handled. Duration 263 ms by bot id=7209041503
+2025-04-03 01:15:45,534 - aiogram.event - INFO - Update id=190428597 is handled. Duration 417 ms by bot id=7209041503
+2025-04-03 01:15:53,272 - aiogram.event - INFO - Update id=190428598 is not handled. Duration 3 ms by bot id=7209041503
+2025-04-03 01:15:53,272 - aiogram.event - ERROR - Cause exception while process update id=190428598 by bot id=7209041503
+AttributeError: 'InaccessibleMessage' object has no attribute 'edit_text'
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/utils/middleware.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/user.py", line 515, in handle_my_orders
+    await callback.message.edit_text(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/pydantic/main.py", line 891, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'InaccessibleMessage' object has no attribute 'edit_text'
+2025-04-03 01:15:55,633 - aiogram.event - INFO - Update id=190428599 is handled. Duration 253 ms by bot id=7209041503
+2025-04-03 01:15:58,917 - aiogram.event - INFO - Update id=190428600 is handled. Duration 266 ms by bot id=7209041503
+2025-04-03 01:19:31,385 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-04-03 01:19:31,386 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 01:19:31,386 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-03 01:19:35,863 - smm_bot - INFO - تم تهيئة قاعدة البيانات الأساسية بنجاح
+2025-04-03 01:19:35,865 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 01:19:35,865 - smm_bot - INFO - تم إعداد الوسائط بنجاح
+2025-04-03 01:19:35,865 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-03 01:19:35,866 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 01:19:36,217 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 01:20:05,418 - aiogram.event - INFO - Update id=190428601 is handled. Duration 522 ms by bot id=7209041503
+2025-04-03 01:20:08,517 - aiogram.event - INFO - Update id=190428602 is handled. Duration 137 ms by bot id=7209041503
+2025-04-03 01:20:10,897 - aiogram.event - INFO - Update id=190428603 is not handled. Duration 2 ms by bot id=7209041503
+2025-04-03 01:20:12,573 - aiogram.event - INFO - Update id=190428604 is not handled. Duration 1 ms by bot id=7209041503
+2025-04-03 01:20:13,602 - aiogram.event - INFO - Update id=190428605 is not handled. Duration 2 ms by bot id=7209041503
+2025-04-03 01:20:14,167 - aiogram.event - INFO - Update id=190428606 is not handled. Duration 3 ms by bot id=7209041503
+2025-04-03 01:25:44,055 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-04-03 01:25:44,056 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 01:25:44,056 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-03 02:11:09,706 - smm_bot - INFO - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 02:11:09,726 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 02:11:09,727 - smm_bot - INFO - تم إعداد وسائط البوت
+2025-04-03 02:11:09,727 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-03 02:11:09,728 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 02:11:10,175 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 02:11:33,845 - smm_bot - INFO - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 02:11:33,846 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 02:11:33,847 - smm_bot - INFO - تم إعداد وسائط البوت
+2025-04-03 02:11:33,847 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-03 02:11:33,848 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 02:11:34,299 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 02:11:34,446 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:11:34,447 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7209041503)
+2025-04-03 02:11:38,612 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:11:38,612 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7209041503)
+2025-04-03 02:11:39,759 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:11:39,759 - aiogram.dispatcher - WARNING - Sleep for 1.310033 seconds and try again... (tryings = 1, bot id = 7209041503)
+2025-04-03 02:11:44,215 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:11:44,215 - aiogram.dispatcher - WARNING - Sleep for 1.213730 seconds and try again... (tryings = 1, bot id = 7209041503)
+2025-04-03 02:11:45,576 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:11:45,576 - aiogram.dispatcher - WARNING - Sleep for 1.767885 seconds and try again... (tryings = 2, bot id = 7209041503)
+2025-04-03 02:11:50,487 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:11:50,487 - aiogram.dispatcher - WARNING - Sleep for 1.560596 seconds and try again... (tryings = 2, bot id = 7209041503)
+2025-04-03 02:11:52,196 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:11:52,196 - aiogram.dispatcher - WARNING - Sleep for 2.186506 seconds and try again... (tryings = 3, bot id = 7209041503)
+2025-04-03 02:11:57,270 - aiogram.dispatcher - INFO - Connection established (tryings = 4, bot id = 7209041503)
+2025-04-03 02:11:57,272 - smm_bot - ERROR - خطأ في الحصول على المستخدم 5464520756: no such column: user_id
+2025-04-03 02:11:57,528 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:11:57,528 - aiogram.dispatcher - WARNING - Sleep for 2.113043 seconds and try again... (tryings = 3, bot id = 7209041503)
+2025-04-03 02:11:57,749 - aiogram.event - INFO - Update id=190428607 is handled. Duration 478 ms by bot id=7209041503
+2025-04-03 02:11:59,784 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:11:59,785 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7209041503)
+2025-04-03 02:12:03,929 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:12:03,929 - aiogram.dispatcher - WARNING - Sleep for 2.627823 seconds and try again... (tryings = 4, bot id = 7209041503)
+2025-04-03 02:12:06,701 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:12:06,701 - aiogram.dispatcher - WARNING - Sleep for 1.375605 seconds and try again... (tryings = 1, bot id = 7209041503)
+2025-04-03 02:12:11,222 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:12:11,223 - aiogram.dispatcher - WARNING - Sleep for 3.536695 seconds and try again... (tryings = 5, bot id = 7209041503)
+2025-04-03 02:12:13,484 - aiogram.dispatcher - INFO - Connection established (tryings = 2, bot id = 7209041503)
+2025-04-03 02:12:13,487 - smm_bot - ERROR - خطأ في الحصول على المستخدم 5464520756: no such column: user_id
+2025-04-03 02:12:13,812 - aiogram.event - INFO - Update id=190428608 is handled. Duration 326 ms by bot id=7209041503
+2025-04-03 02:12:14,919 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:12:14,919 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7209041503)
+2025-04-03 02:12:18,461 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7209041503)
+2025-04-03 02:12:18,463 - smm_bot - ERROR - خطأ في الحصول على المستخدم 5464520756: no such column: user_id
+2025-04-03 02:12:18,815 - aiogram.event - INFO - Update id=190428609 is handled. Duration 353 ms by bot id=7209041503
+2025-04-03 02:12:19,061 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:12:19,061 - aiogram.dispatcher - WARNING - Sleep for 4.680743 seconds and try again... (tryings = 6, bot id = 7209041503)
+2025-04-03 02:12:19,659 - aiogram.event - INFO - Update id=190428610 is not handled. Duration 1 ms by bot id=7209041503
+2025-04-03 02:12:23,886 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:12:23,886 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7209041503)
+2025-04-03 02:12:28,030 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:12:28,030 - aiogram.dispatcher - WARNING - Sleep for 4.935152 seconds and try again... (tryings = 7, bot id = 7209041503)
+2025-04-03 02:12:28,181 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7209041503)
+2025-04-03 02:12:28,183 - aiogram.event - INFO - Update id=190428611 is not handled. Duration 1 ms by bot id=7209041503
+2025-04-03 02:12:32,602 - aiogram.event - INFO - Update id=190428612 is not handled. Duration 1 ms by bot id=7209041503
+2025-04-03 02:12:33,116 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:12:33,116 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7209041503)
+2025-04-03 02:12:35,484 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7209041503)
+2025-04-03 02:12:35,796 - aiogram.event - INFO - Update id=190428613 is handled. Duration 310 ms by bot id=7209041503
+2025-04-03 02:12:37,259 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:12:37,259 - aiogram.dispatcher - WARNING - Sleep for 4.896475 seconds and try again... (tryings = 8, bot id = 7209041503)
+2025-04-03 02:12:37,407 - smm_bot - ERROR - خطأ في الحصول على المستخدم 5464520756: no such column: user_id
+2025-04-03 02:12:37,745 - aiogram.event - INFO - Update id=190428614 is handled. Duration 339 ms by bot id=7209041503
+2025-04-03 02:12:38,847 - aiogram.event - INFO - Update id=190428615 is handled. Duration 300 ms by bot id=7209041503
+2025-04-03 02:12:42,302 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:12:42,302 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7209041503)
+2025-04-03 02:12:46,446 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:12:46,446 - aiogram.dispatcher - WARNING - Sleep for 4.957667 seconds and try again... (tryings = 9, bot id = 7209041503)
+2025-04-03 02:12:51,551 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:12:51,551 - aiogram.dispatcher - WARNING - Sleep for 1.271844 seconds and try again... (tryings = 1, bot id = 7209041503)
+2025-04-03 02:12:55,966 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:12:55,966 - aiogram.dispatcher - WARNING - Sleep for 4.921316 seconds and try again... (tryings = 10, bot id = 7209041503)
+2025-04-03 02:12:58,660 - aiogram.dispatcher - INFO - Connection established (tryings = 2, bot id = 7209041503)
+2025-04-03 02:12:58,662 - smm_bot - ERROR - خطأ في الحصول على المستخدم 5464520756: no such column: user_id
+2025-04-03 02:12:58,974 - aiogram.event - INFO - Update id=190428616 is handled. Duration 313 ms by bot id=7209041503
+2025-04-03 02:12:59,997 - aiogram.event - INFO - Update id=190428617 is not handled. Duration 0 ms by bot id=7209041503
+2025-04-03 02:13:01,035 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:13:01,035 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7209041503)
+2025-04-03 02:13:05,177 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:13:05,177 - aiogram.dispatcher - WARNING - Sleep for 5.071138 seconds and try again... (tryings = 11, bot id = 7209041503)
+2025-04-03 02:13:10,396 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:13:10,396 - aiogram.dispatcher - WARNING - Sleep for 1.301533 seconds and try again... (tryings = 1, bot id = 7209041503)
+2025-04-03 02:13:14,841 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:13:14,841 - aiogram.dispatcher - WARNING - Sleep for 5.143577 seconds and try again... (tryings = 12, bot id = 7209041503)
+2025-04-03 02:13:20,132 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:13:20,132 - aiogram.dispatcher - WARNING - Sleep for 1.877126 seconds and try again... (tryings = 2, bot id = 7209041503)
+2025-04-03 02:13:25,151 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:13:25,152 - aiogram.dispatcher - WARNING - Sleep for 5.000576 seconds and try again... (tryings = 13, bot id = 7209041503)
+2025-04-03 02:13:30,302 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:13:30,302 - aiogram.dispatcher - WARNING - Sleep for 2.515399 seconds and try again... (tryings = 3, bot id = 7209041503)
+2025-04-03 02:13:35,961 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:13:35,961 - aiogram.dispatcher - WARNING - Sleep for 4.940599 seconds and try again... (tryings = 14, bot id = 7209041503)
+2025-04-03 02:13:41,048 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:13:41,049 - aiogram.dispatcher - WARNING - Sleep for 3.303147 seconds and try again... (tryings = 4, bot id = 7209041503)
+2025-04-03 02:13:44,497 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:13:44,497 - aiogram.dispatcher - WARNING - Sleep for 5.205729 seconds and try again... (tryings = 15, bot id = 7209041503)
+2025-04-03 02:13:49,851 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:13:49,851 - aiogram.dispatcher - WARNING - Sleep for 4.406319 seconds and try again... (tryings = 5, bot id = 7209041503)
+2025-04-03 02:13:54,403 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:13:54,404 - aiogram.dispatcher - WARNING - Sleep for 5.054175 seconds and try again... (tryings = 16, bot id = 7209041503)
+2025-04-03 02:13:59,604 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:13:59,605 - aiogram.dispatcher - WARNING - Sleep for 4.836276 seconds and try again... (tryings = 6, bot id = 7209041503)
+2025-04-03 02:14:04,587 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:14:04,587 - aiogram.dispatcher - WARNING - Sleep for 5.034779 seconds and try again... (tryings = 17, bot id = 7209041503)
+2025-04-03 02:14:09,769 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:14:09,769 - aiogram.dispatcher - WARNING - Sleep for 4.958567 seconds and try again... (tryings = 7, bot id = 7209041503)
+2025-04-03 02:14:14,876 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:14:14,876 - aiogram.dispatcher - WARNING - Sleep for 4.958469 seconds and try again... (tryings = 18, bot id = 7209041503)
+2025-04-03 02:14:19,982 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:14:19,982 - aiogram.dispatcher - WARNING - Sleep for 5.005580 seconds and try again... (tryings = 8, bot id = 7209041503)
+2025-04-03 02:14:25,134 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:14:25,135 - aiogram.dispatcher - WARNING - Sleep for 4.895693 seconds and try again... (tryings = 19, bot id = 7209041503)
+2025-04-03 02:14:30,177 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:14:30,177 - aiogram.dispatcher - WARNING - Sleep for 5.071075 seconds and try again... (tryings = 9, bot id = 7209041503)
+2025-04-03 02:14:35,395 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:14:35,395 - aiogram.dispatcher - WARNING - Sleep for 5.124497 seconds and try again... (tryings = 20, bot id = 7209041503)
+2025-04-03 02:14:40,666 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:14:40,666 - aiogram.dispatcher - WARNING - Sleep for 4.919895 seconds and try again... (tryings = 10, bot id = 7209041503)
+2025-04-03 02:14:45,736 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:14:45,737 - aiogram.dispatcher - WARNING - Sleep for 5.069193 seconds and try again... (tryings = 21, bot id = 7209041503)
+2025-04-03 02:14:50,949 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:14:50,949 - aiogram.dispatcher - WARNING - Sleep for 5.022435 seconds and try again... (tryings = 11, bot id = 7209041503)
+2025-04-03 02:14:52,690 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-04-03 02:14:52,691 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 02:14:52,693 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-03 02:14:52,693 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-04-03 02:14:52,695 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 02:14:52,695 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-03 02:14:58,671 - smm_bot - INFO - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 02:14:58,673 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 02:14:58,673 - smm_bot - INFO - تم إعداد وسائط البوت
+2025-04-03 02:14:58,674 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-03 02:14:58,674 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 02:14:59,106 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 02:15:06,179 - smm_bot - INFO - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 02:15:06,180 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 02:15:06,181 - smm_bot - INFO - تم إعداد وسائط البوت
+2025-04-03 02:15:06,181 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-03 02:15:06,181 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 02:15:06,628 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 02:15:06,838 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:15:06,839 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7209041503)
+2025-04-03 02:15:10,998 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:15:10,998 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7209041503)
+2025-04-03 02:15:12,149 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:15:12,150 - aiogram.dispatcher - WARNING - Sleep for 1.346335 seconds and try again... (tryings = 1, bot id = 7209041503)
+2025-04-03 02:15:16,639 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:15:16,640 - aiogram.dispatcher - WARNING - Sleep for 1.394265 seconds and try again... (tryings = 1, bot id = 7209041503)
+2025-04-03 02:15:18,190 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:15:18,190 - aiogram.dispatcher - WARNING - Sleep for 1.854328 seconds and try again... (tryings = 2, bot id = 7209041503)
+2025-04-03 02:15:23,190 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:15:23,190 - aiogram.dispatcher - WARNING - Sleep for 1.908766 seconds and try again... (tryings = 2, bot id = 7209041503)
+2025-04-03 02:15:25,242 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:15:25,245 - aiogram.dispatcher - WARNING - Sleep for 2.416641 seconds and try again... (tryings = 3, bot id = 7209041503)
+2025-04-03 02:15:30,807 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:15:30,808 - aiogram.dispatcher - WARNING - Sleep for 2.587324 seconds and try again... (tryings = 3, bot id = 7209041503)
+2025-04-03 02:15:33,538 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:15:33,538 - aiogram.dispatcher - WARNING - Sleep for 3.152395 seconds and try again... (tryings = 4, bot id = 7209041503)
+2025-04-03 02:15:36,838 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:15:36,838 - aiogram.dispatcher - WARNING - Sleep for 3.418478 seconds and try again... (tryings = 4, bot id = 7209041503)
+2025-04-03 02:15:40,418 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:15:40,419 - aiogram.dispatcher - WARNING - Sleep for 4.106021 seconds and try again... (tryings = 5, bot id = 7209041503)
+2025-04-03 02:15:44,692 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:15:44,692 - aiogram.dispatcher - WARNING - Sleep for 4.520378 seconds and try again... (tryings = 5, bot id = 7209041503)
+2025-04-03 02:15:49,357 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:15:49,358 - aiogram.dispatcher - WARNING - Sleep for 5.133648 seconds and try again... (tryings = 6, bot id = 7209041503)
+2025-04-03 02:15:54,637 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:15:54,637 - aiogram.dispatcher - WARNING - Sleep for 5.075264 seconds and try again... (tryings = 6, bot id = 7209041503)
+2025-04-03 02:15:59,858 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:15:59,858 - aiogram.dispatcher - WARNING - Sleep for 5.000003 seconds and try again... (tryings = 7, bot id = 7209041503)
+2025-04-03 02:16:05,008 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:16:05,008 - aiogram.dispatcher - WARNING - Sleep for 5.041221 seconds and try again... (tryings = 7, bot id = 7209041503)
+2025-04-03 02:16:10,195 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:16:10,196 - aiogram.dispatcher - WARNING - Sleep for 5.005228 seconds and try again... (tryings = 8, bot id = 7209041503)
+2025-04-03 02:16:15,361 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:16:15,361 - aiogram.dispatcher - WARNING - Sleep for 4.884873 seconds and try again... (tryings = 8, bot id = 7209041503)
+2025-04-03 02:16:20,392 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:16:20,392 - aiogram.dispatcher - WARNING - Sleep for 5.077520 seconds and try again... (tryings = 9, bot id = 7209041503)
+2025-04-03 02:16:25,617 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:16:25,617 - aiogram.dispatcher - WARNING - Sleep for 5.064657 seconds and try again... (tryings = 9, bot id = 7209041503)
+2025-04-03 02:16:30,828 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-04-03 02:16:30,828 - aiogram.dispatcher - WARNING - Sleep for 5.168714 seconds and try again... (tryings = 10, bot id = 7209041503)
+2025-04-03 02:16:34,820 - smm_bot - INFO - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 02:16:34,822 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 02:16:34,822 - smm_bot - INFO - تم إعداد وسائط البوت
+2025-04-03 02:16:34,822 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-03 02:16:34,823 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 02:16:35,256 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 02:16:46,147 - aiogram.dispatcher - INFO - Connection established (tryings = 11, bot id = 7209041503)
+2025-04-03 02:17:06,656 - smm_bot - INFO - تم استلام إشارة SIGTERM...
+2025-04-03 02:17:06,656 - smm_bot - INFO - إيقاف البوت...
+2025-04-03 02:17:06,657 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 02:17:06,657 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-03 02:17:06,908 - smm_bot - INFO - تم إغلاق جلسة البوت
+2025-04-03 02:17:06,908 - smm_bot - INFO - تم إغلاق البوت وتحرير الموارد
+2025-04-03 02:17:19,922 - smm_bot - INFO - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 02:17:19,923 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 02:17:19,923 - smm_bot - INFO - تم إعداد وسائط البوت
+2025-04-03 02:17:19,924 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-03 02:17:19,924 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 02:17:20,357 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 02:17:47,541 - smm_bot - ERROR - خطأ في الحصول على المستخدم 5464520756: no such column: user_id
+2025-04-03 02:17:48,006 - aiogram.event - INFO - Update id=190428618 is handled. Duration 466 ms by bot id=7209041503
+2025-04-03 02:17:50,411 - aiogram.event - INFO - Update id=190428619 is not handled. Duration 1 ms by bot id=7209041503
+2025-04-03 02:17:56,115 - smm_bot - ERROR - خطأ في الحصول على المستخدم 5464520756: no such column: user_id
+2025-04-03 02:17:56,433 - aiogram.event - INFO - Update id=190428620 is handled. Duration 320 ms by bot id=7209041503
+2025-04-03 02:17:58,282 - smm_bot - ERROR - خطأ في الحصول على المستخدم 5464520756: no such column: user_id
+2025-04-03 02:17:58,602 - aiogram.event - INFO - Update id=190428621 is handled. Duration 321 ms by bot id=7209041503
+2025-04-03 02:17:59,870 - aiogram.event - INFO - Update id=190428622 is not handled. Duration 1 ms by bot id=7209041503
+2025-04-03 02:18:01,962 - aiogram.event - INFO - Update id=190428623 is not handled. Duration 0 ms by bot id=7209041503
+2025-04-03 02:18:03,882 - aiogram.event - INFO - Update id=190428624 is handled. Duration 345 ms by bot id=7209041503
+2025-04-03 02:18:04,891 - smm_bot - ERROR - خطأ في الحصول على المستخدم 5464520756: no such column: user_id
+2025-04-03 02:18:05,229 - aiogram.event - INFO - Update id=190428625 is handled. Duration 338 ms by bot id=7209041503
+2025-04-03 02:18:06,274 - aiogram.event - INFO - Update id=190428626 is handled. Duration 303 ms by bot id=7209041503
+2025-04-03 02:18:07,641 - smm_bot - ERROR - خطأ في الحصول على المستخدم 5464520756: no such column: user_id
+2025-04-03 02:18:07,949 - aiogram.event - INFO - Update id=190428627 is handled. Duration 309 ms by bot id=7209041503
+2025-04-03 02:18:51,422 - smm_bot - ERROR - يبدو أن نسخة أخرى من البوت تعمل بالفعل. إذا كنت متأكدًا من عدم وجود نسخة أخرى، قم بحذف ملف bot.lock وأعد المحاولة.
+2025-04-03 02:20:44,640 - smm_bot - ERROR - يبدو أن نسخة أخرى من البوت تعمل بالفعل. إذا كنت متأكدًا من عدم وجود نسخة أخرى، قم بحذف ملف bot.lock وأعد المحاولة.
+2025-04-03 02:20:49,412 - smm_bot - ERROR - يبدو أن نسخة أخرى من البوت تعمل بالفعل. إذا كنت متأكدًا من عدم وجود نسخة أخرى، قم بحذف ملف bot.lock وأعد المحاولة.
+2025-04-03 02:21:38,886 - smm_bot - INFO - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 02:21:38,887 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 02:21:38,887 - smm_bot - INFO - تم إعداد وسائط البوت
+2025-04-03 02:21:38,888 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-03 02:21:38,888 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 02:21:39,324 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 02:21:52,719 - smm_bot - ERROR - خطأ في الحصول على المستخدم 5464520756: no such column: user_id
+2025-04-03 02:21:53,167 - aiogram.event - INFO - Update id=190428628 is handled. Duration 448 ms by bot id=7209041503
+2025-04-03 02:21:54,491 - aiogram.event - INFO - Update id=190428629 is not handled. Duration 0 ms by bot id=7209041503
+2025-04-03 02:22:00,403 - smm_bot - ERROR - خطأ في الحصول على المستخدم 5464520756: no such column: user_id
+2025-04-03 02:22:00,716 - aiogram.event - INFO - Update id=190428630 is handled. Duration 314 ms by bot id=7209041503
+2025-04-03 02:22:02,213 - smm_bot - ERROR - خطأ في الحصول على المستخدم 5464520756: no such column: user_id
+2025-04-03 02:22:02,525 - aiogram.event - INFO - Update id=190428631 is handled. Duration 312 ms by bot id=7209041503
+2025-04-03 02:22:03,374 - aiogram.event - INFO - Update id=190428632 is not handled. Duration 0 ms by bot id=7209041503
+2025-04-03 02:22:06,876 - aiogram.event - INFO - Update id=190428633 is not handled. Duration 0 ms by bot id=7209041503
+2025-04-03 02:22:10,136 - aiogram.event - INFO - Update id=190428634 is handled. Duration 496 ms by bot id=7209041503
+2025-04-03 02:22:10,935 - smm_bot - ERROR - خطأ في الحصول على المستخدم 5464520756: no such column: user_id
+2025-04-03 02:22:11,296 - aiogram.event - INFO - Update id=190428635 is handled. Duration 361 ms by bot id=7209041503
+2025-04-03 02:22:12,290 - aiogram.event - INFO - Update id=190428636 is handled. Duration 323 ms by bot id=7209041503
+2025-04-03 02:22:13,248 - smm_bot - ERROR - خطأ في الحصول على المستخدم 5464520756: no such column: user_id
+2025-04-03 02:22:13,671 - aiogram.event - INFO - Update id=190428637 is handled. Duration 423 ms by bot id=7209041503
+2025-04-03 02:24:02,471 - smm_bot - ERROR - يبدو أن نسخة أخرى من البوت تعمل بالفعل. إذا كنت متأكدًا من عدم وجود نسخة أخرى، قم بحذف ملف bot.lock وأعد المحاولة.
+2025-04-03 02:24:18,186 - smm_bot - INFO - تم استلام إشارة SIGTERM...
+2025-04-03 02:24:18,186 - smm_bot - INFO - إيقاف البوت...
+2025-04-03 02:24:18,187 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 02:24:18,187 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-03 02:24:18,438 - smm_bot - INFO - بدء تنظيف الموارد...
+2025-04-03 02:24:18,438 - smm_bot - INFO - تم إغلاق جلسة البوت
+2025-04-03 02:24:18,438 - smm_bot - INFO - تم إغلاق البوت وتحرير الموارد بنجاح
+2025-04-03 02:24:18,441 - smm_bot - INFO - تم حذف ملف القفل
+2025-04-03 02:24:21,268 - smm_bot - INFO - أعمدة جدول المستخدمين: ['id', 'username', 'first_name', 'last_name', 'created_at', 'role', 'balance', 'total_orders', 'is_active', 'last_activity']
+2025-04-03 02:24:21,268 - smm_bot - ERROR - عمود user_id غير موجود في جدول المستخدمين
+2025-04-03 02:24:21,392 - smm_bot - INFO - تم إعادة إنشاء جدول المستخدمين
+2025-04-03 02:24:21,393 - smm_bot - INFO - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 02:24:21,394 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 02:24:21,394 - smm_bot - INFO - تم إعداد وسائط البوت
+2025-04-03 02:24:21,394 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-03 02:24:21,394 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 02:24:21,821 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 02:24:47,561 - aiogram.event - INFO - Update id=190428638 is handled. Duration 450 ms by bot id=7209041503
+2025-04-03 02:24:50,526 - aiogram.event - INFO - Update id=190428639 is handled. Duration 355 ms by bot id=7209041503
+2025-04-03 02:24:52,147 - aiogram.event - INFO - Update id=190428640 is handled. Duration 309 ms by bot id=7209041503
+2025-04-03 02:24:52,886 - aiogram.event - INFO - Update id=190428641 is not handled. Duration 0 ms by bot id=7209041503
+2025-04-03 02:24:55,608 - aiogram.event - INFO - Update id=190428642 is handled. Duration 306 ms by bot id=7209041503
+2025-04-03 02:24:57,124 - aiogram.event - INFO - Update id=190428643 is handled. Duration 300 ms by bot id=7209041503
+2025-04-03 02:24:57,806 - aiogram.event - INFO - Update id=190428644 is not handled. Duration 0 ms by bot id=7209041503
+2025-04-03 02:25:00,799 - aiogram.event - INFO - Update id=190428645 is not handled. Duration 0 ms by bot id=7209041503
+2025-04-03 02:25:02,351 - aiogram.event - INFO - Update id=190428646 is handled. Duration 308 ms by bot id=7209041503
+2025-04-03 02:25:03,660 - aiogram.event - INFO - Update id=190428647 is handled. Duration 326 ms by bot id=7209041503
+2025-04-03 02:25:29,670 - aiogram.event - INFO - Update id=190428648 is handled. Duration 340 ms by bot id=7209041503
+2025-04-03 02:25:31,008 - aiogram.event - INFO - Update id=190428649 is handled. Duration 317 ms by bot id=7209041503
+2025-04-03 02:25:32,021 - aiogram.event - INFO - Update id=190428650 is not handled. Duration 0 ms by bot id=7209041503
+2025-04-03 02:25:48,170 - aiogram.event - INFO - Update id=190428651 is not handled. Duration 0 ms by bot id=7209041503
+2025-04-03 02:27:54,941 - smm_bot - INFO - تم استلام إشارة SIGTERM...
+2025-04-03 02:27:54,941 - smm_bot - INFO - إيقاف البوت...
+2025-04-03 02:27:54,941 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 02:27:54,942 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-03 02:27:55,193 - smm_bot - INFO - بدء تنظيف الموارد...
+2025-04-03 02:27:55,193 - smm_bot - INFO - تم إغلاق جلسة البوت
+2025-04-03 02:27:55,193 - smm_bot - INFO - تم إغلاق البوت وتحرير الموارد بنجاح
+2025-04-03 02:27:55,194 - smm_bot - INFO - تم حذف ملف القفل
+2025-04-03 02:37:42,623 - smm_bot - INFO - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity']
+2025-04-03 02:37:42,624 - smm_bot - INFO - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 02:37:42,625 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 02:37:42,626 - smm_bot - INFO - تم إعداد وسائط البوت
+2025-04-03 02:37:42,626 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-03 02:37:42,626 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 02:37:43,052 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 02:38:01,179 - aiogram.event - INFO - Update id=190428652 is handled. Duration 475 ms by bot id=7209041503
+2025-04-03 02:38:02,519 - smm_bot - INFO - تم إنشاء جلسة API جديدة
+2025-04-03 02:38:03,256 - smm_bot - ERROR - فشل في جلب الخدمات: 401
+2025-04-03 02:38:03,428 - aiogram.event - INFO - Update id=190428653 is handled. Duration 1058 ms by bot id=7209041503
+2025-04-03 02:38:08,288 - aiogram.event - INFO - Update id=190428654 is handled. Duration 316 ms by bot id=7209041503
+2025-04-03 02:38:09,497 - smm_bot - ERROR - فشل في جلب الطلبات: 404
+2025-04-03 02:38:09,653 - aiogram.event - INFO - Update id=190428655 is handled. Duration 464 ms by bot id=7209041503
+2025-04-03 02:38:13,290 - aiogram.event - INFO - Update id=190428656 is handled. Duration 346 ms by bot id=7209041503
+2025-04-03 02:38:14,341 - aiogram.event - INFO - Update id=190428657 is handled. Duration 301 ms by bot id=7209041503
+2025-04-03 02:38:15,411 - aiogram.event - INFO - Update id=190428658 is handled. Duration 304 ms by bot id=7209041503
+2025-04-03 02:38:16,840 - aiogram.event - INFO - Update id=190428659 is handled. Duration 359 ms by bot id=7209041503
+2025-04-03 02:38:29,174 - aiogram.event - INFO - Update id=190428660 is handled. Duration 231 ms by bot id=7209041503
+2025-04-03 02:38:35,696 - aiogram.event - INFO - Update id=190428661 is handled. Duration 304 ms by bot id=7209041503
+2025-04-03 02:38:38,412 - aiogram.event - INFO - Update id=190428662 is handled. Duration 191 ms by bot id=7209041503
+2025-04-03 02:44:19,141 - smm_bot - INFO - تم استلام إشارة SIGTERM...
+2025-04-03 02:44:19,141 - smm_bot - INFO - إيقاف البوت...
+2025-04-03 02:44:19,142 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 02:44:19,142 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-03 02:44:19,393 - smm_bot - INFO - بدء تنظيف الموارد...
+2025-04-03 02:44:19,394 - smm_bot - INFO - تم حذف ملف القفل
+2025-04-03 02:48:04,354 - smm_bot - INFO - تم تهيئة موكل API بنجاح. URL: https://garren.store/api/v2
+2025-04-03 02:48:04,359 - smm_bot - INFO - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity']
+2025-04-03 02:48:04,361 - smm_bot - INFO - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 02:48:04,362 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 02:48:04,362 - smm_bot - INFO - تم إعداد وسائط البوت
+2025-04-03 02:48:04,362 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-03 02:48:04,362 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 02:48:04,794 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 02:48:04,951 - aiogram.event - INFO - Update id=190428663 is not handled. Duration 0 ms by bot id=7209041503
+2025-04-03 02:48:18,397 - aiogram.event - INFO - Update id=190428664 is handled. Duration 452 ms by bot id=7209041503
+2025-04-03 02:48:20,987 - smm_bot - INFO - تم إنشاء جلسة API جديدة
+2025-04-03 02:48:22,265 - aiogram.event - INFO - Update id=190428665 is handled. Duration 1438 ms by bot id=7209041503
+2025-04-03 02:48:28,274 - aiogram.event - INFO - Update id=190428666 is handled. Duration 161 ms by bot id=7209041503
+2025-04-03 02:48:30,098 - smm_bot - ERROR - فشل في طلب orders: 404
+2025-04-03 02:48:30,261 - aiogram.event - INFO - Update id=190428667 is handled. Duration 479 ms by bot id=7209041503
+2025-04-03 02:48:32,618 - aiogram.event - INFO - Update id=190428668 is handled. Duration 339 ms by bot id=7209041503
+2025-04-03 02:48:33,747 - aiogram.event - INFO - Update id=190428669 is handled. Duration 414 ms by bot id=7209041503
+2025-04-03 02:48:34,728 - aiogram.event - INFO - Update id=190428670 is handled. Duration 304 ms by bot id=7209041503
+2025-04-03 02:48:35,776 - aiogram.event - INFO - Update id=190428671 is handled. Duration 311 ms by bot id=7209041503
+2025-04-03 02:48:36,930 - aiogram.event - INFO - Update id=190428672 is handled. Duration 302 ms by bot id=7209041503
+2025-04-03 02:48:37,927 - aiogram.event - INFO - Update id=190428673 is handled. Duration 308 ms by bot id=7209041503
+2025-04-03 02:48:41,193 - aiogram.event - INFO - Update id=190428674 is handled. Duration 166 ms by bot id=7209041503
+2025-04-03 02:48:43,032 - aiogram.event - INFO - Update id=190428675 is handled. Duration 478 ms by bot id=7209041503
+2025-04-03 02:48:44,273 - aiogram.event - INFO - Update id=190428676 is handled. Duration 347 ms by bot id=7209041503
+2025-04-03 02:53:04,241 - smm_bot - INFO - تم استلام إشارة SIGTERM...
+2025-04-03 02:53:04,241 - smm_bot - INFO - إيقاف البوت...
+2025-04-03 02:53:04,242 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 02:53:04,242 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-03 02:53:04,493 - smm_bot - INFO - بدء تنظيف الموارد...
+2025-04-03 02:53:04,494 - smm_bot - INFO - تم حذف ملف القفل
+2025-04-03 02:53:20,667 - smm_bot - INFO - تم تهيئة موكل API بنجاح. URL: https://garren.store/api/v2
+2025-04-03 02:55:52,989 - smm_bot - INFO - تم تهيئة موكل API بنجاح. URL: https://garren.store/api/v2
+2025-04-03 02:55:52,994 - smm_bot - INFO - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity']
+2025-04-03 02:55:52,995 - smm_bot - INFO - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 02:55:52,996 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 02:55:52,996 - smm_bot - INFO - تم إعداد وسائط البوت
+2025-04-03 02:55:52,996 - smm_bot - INFO - بدء تشغيل البوت
+2025-04-03 02:55:52,996 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 02:55:53,428 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 02:55:57,766 - aiogram.event - INFO - Update id=190428677 is handled. Duration 474 ms by bot id=7209041503
+2025-04-03 02:56:01,506 - aiogram.event - INFO - Update id=190428678 is handled. Duration 434 ms by bot id=7209041503
+2025-04-03 02:56:02,995 - aiogram.event - INFO - Update id=190428679 is handled. Duration 361 ms by bot id=7209041503
+2025-04-03 02:56:03,807 - smm_bot - INFO - تم إنشاء جلسة API جديدة
+2025-04-03 02:56:04,870 - aiogram.event - INFO - Update id=190428680 is handled. Duration 1215 ms by bot id=7209041503
+2025-04-03 02:56:09,489 - aiogram.event - INFO - Update id=190428681 is handled. Duration 179 ms by bot id=7209041503
+2025-04-03 02:56:14,031 - smm_bot - INFO - تم استلام إشارة SIGTERM...
+2025-04-03 02:56:14,031 - smm_bot - INFO - إيقاف البوت...
+2025-04-03 02:56:14,031 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 02:56:14,032 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-03 02:56:14,283 - smm_bot - INFO - بدء تنظيف الموارد...
+2025-04-03 02:56:14,283 - smm_bot - INFO - تم إغلاق جلسة البوت
+2025-04-03 02:56:14,283 - smm_bot - INFO - تم إغلاق البوت وتحرير الموارد بنجاح
+2025-04-03 02:56:14,284 - smm_bot - INFO - تم حذف ملف القفل
+2025-04-03 02:56:14,398 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fd309827650>
+2025-04-03 02:56:14,399 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x7fd3081f9b00>, 2952.622376817)])']
+connector: <aiohttp.connector.TCPConnector object at 0x7fd309d17490>
+2025-04-03 16:30:26 - smm_bot - INFO - main.py:115 - تم إنشاء ملف قفل جديد
+2025-04-03 16:30:26 - smm_bot - INFO - core.py:41 - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity', 'rank_id']
+2025-04-03 16:30:26 - smm_bot - INFO - core.py:70 - إضافة عمود updated_at إلى جدول الطلبات
+2025-04-03 16:30:26 - smm_bot - ERROR - core.py:74 - خطأ في التحقق من أو إضافة عمود updated_at: Cannot add a column with non-constant default
+2025-04-03 16:30:26 - smm_bot - INFO - core.py:94 - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 16:30:26 - smm_bot - INFO - ranks.py:87 - تم تهيئة نظام الرتب بنجاح
+2025-04-03 16:30:26 - smm_bot - INFO - main.py:193 - تم إعداد وسائط البوت
+2025-04-03 16:30:26 - smm_bot - INFO - main.py:142 - تم بدء مهمة مزامنة رصيد المشرف
+2025-04-03 16:30:27 - smm_bot - INFO - main.py:203 - بدء تشغيل البوت
+2025-04-03 16:30:50 - smm_bot - INFO - user.py:43 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 16:30:57 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 16:30:59 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 16:31:01 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 16:34:13 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 16:36:11 - aiogram.dispatcher - WARNING - dispatcher.py:455 - Received SIGTERM signal
+2025-04-03 16:36:11 - smm_bot - INFO - main.py:210 - بدء تنظيف الموارد...
+2025-04-03 16:36:11 - smm_bot - INFO - common.py:104 - بدء تنظيف الموارد...
+2025-04-03 16:36:11 - smm_bot - INFO - common.py:110 - تم إغلاق جلسة API بنجاح
+2025-04-03 16:36:11 - smm_bot - INFO - common.py:118 - تم إغلاق اتصالات قاعدة البيانات بنجاح
+2025-04-03 16:36:11 - smm_bot - INFO - common.py:127 - إلغاء 1 مهمة معلقة
+2025-04-03 16:36:11 - smm_bot - INFO - common.py:134 - اكتمل تنظيف الموارد
+2025-04-03 16:36:11 - smm_bot - INFO - main.py:212 - تم إغلاق البوت وتحرير الموارد بنجاح
+2025-04-03 16:36:11 - smm_bot - INFO - main.py:217 - تم حذف ملف القفل
+2025-04-03 16:36:56 - smm_bot - INFO - main.py:115 - تم إنشاء ملف قفل جديد
+2025-04-03 16:36:56 - smm_bot - INFO - core.py:41 - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity', 'rank_id']
+2025-04-03 16:36:56 - smm_bot - INFO - core.py:70 - إضافة عمود updated_at إلى جدول الطلبات
+2025-04-03 16:36:56 - smm_bot - ERROR - core.py:74 - خطأ في التحقق من أو إضافة عمود updated_at: Cannot add a column with non-constant default
+2025-04-03 16:36:56 - smm_bot - INFO - core.py:94 - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 16:36:56 - smm_bot - INFO - ranks.py:87 - تم تهيئة نظام الرتب بنجاح
+2025-04-03 16:36:56 - smm_bot - INFO - main.py:193 - تم إعداد وسائط البوت
+2025-04-03 16:36:56 - smm_bot - INFO - main.py:142 - تم بدء مهمة مزامنة رصيد المشرف
+2025-04-03 16:36:57 - smm_bot - INFO - main.py:203 - بدء تشغيل البوت
+2025-04-03 16:37:10 - smm_bot - INFO - user.py:43 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 16:37:12 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 16:37:30 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 16:37:42 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 16:43:09 - aiogram.dispatcher - WARNING - dispatcher.py:455 - Received SIGTERM signal
+2025-04-03 16:43:09 - smm_bot - INFO - main.py:210 - بدء تنظيف الموارد...
+2025-04-03 16:43:09 - smm_bot - INFO - common.py:104 - بدء تنظيف الموارد...
+2025-04-03 16:43:09 - smm_bot - INFO - common.py:110 - تم إغلاق جلسة API بنجاح
+2025-04-03 16:43:09 - smm_bot - INFO - common.py:118 - تم إغلاق اتصالات قاعدة البيانات بنجاح
+2025-04-03 16:43:09 - smm_bot - INFO - common.py:127 - إلغاء 1 مهمة معلقة
+2025-04-03 16:43:09 - smm_bot - INFO - common.py:134 - اكتمل تنظيف الموارد
+2025-04-03 16:43:09 - smm_bot - INFO - main.py:212 - تم إغلاق البوت وتحرير الموارد بنجاح
+2025-04-03 16:43:09 - smm_bot - INFO - main.py:217 - تم حذف ملف القفل
+2025-04-03 16:43:14 - smm_bot - INFO - main.py:115 - تم إنشاء ملف قفل جديد
+2025-04-03 16:43:14 - smm_bot - INFO - core.py:41 - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity', 'rank_id']
+2025-04-03 16:43:14 - smm_bot - INFO - core.py:70 - إضافة عمود updated_at إلى جدول الطلبات
+2025-04-03 16:43:14 - smm_bot - ERROR - core.py:74 - خطأ في التحقق من أو إضافة عمود updated_at: Cannot add a column with non-constant default
+2025-04-03 16:43:14 - smm_bot - INFO - core.py:94 - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 16:43:14 - smm_bot - INFO - ranks.py:87 - تم تهيئة نظام الرتب بنجاح
+2025-04-03 16:43:14 - smm_bot - INFO - main.py:193 - تم إعداد وسائط البوت
+2025-04-03 16:43:14 - smm_bot - INFO - main.py:142 - تم بدء مهمة مزامنة رصيد المشرف
+2025-04-03 16:43:14 - smm_bot - INFO - main.py:203 - بدء تشغيل البوت
+2025-04-03 17:01:38 - aiogram.dispatcher - WARNING - dispatcher.py:455 - Received SIGTERM signal
+2025-04-03 17:01:38 - smm_bot - INFO - main.py:210 - بدء تنظيف الموارد...
+2025-04-03 17:01:38 - smm_bot - INFO - common.py:104 - بدء تنظيف الموارد...
+2025-04-03 17:01:38 - smm_bot - INFO - common.py:110 - تم إغلاق جلسة API بنجاح
+2025-04-03 17:01:38 - smm_bot - INFO - common.py:118 - تم إغلاق اتصالات قاعدة البيانات بنجاح
+2025-04-03 17:01:38 - smm_bot - INFO - common.py:127 - إلغاء 1 مهمة معلقة
+2025-04-03 17:01:38 - smm_bot - INFO - common.py:134 - اكتمل تنظيف الموارد
+2025-04-03 17:01:38 - smm_bot - INFO - main.py:212 - تم إغلاق البوت وتحرير الموارد بنجاح
+2025-04-03 17:01:38 - smm_bot - INFO - main.py:217 - تم حذف ملف القفل
+2025-04-03 17:01:51 - smm_bot - INFO - main.py:115 - تم إنشاء ملف قفل جديد
+2025-04-03 17:01:51 - smm_bot - INFO - core.py:41 - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity', 'rank_id']
+2025-04-03 17:01:51 - smm_bot - INFO - core.py:70 - إضافة عمود updated_at إلى جدول الطلبات
+2025-04-03 17:01:51 - smm_bot - ERROR - core.py:74 - خطأ في التحقق من أو إضافة عمود updated_at: Cannot add a column with non-constant default
+2025-04-03 17:01:51 - smm_bot - INFO - core.py:94 - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 17:01:51 - smm_bot - INFO - ranks.py:87 - تم تهيئة نظام الرتب بنجاح
+2025-04-03 17:01:51 - smm_bot - INFO - main.py:193 - تم إعداد وسائط البوت
+2025-04-03 17:01:51 - smm_bot - INFO - main.py:142 - تم بدء مهمة مزامنة رصيد المشرف
+2025-04-03 17:01:51 - smm_bot - INFO - main.py:203 - بدء تشغيل البوت
+2025-04-03 17:02:11 - smm_bot - INFO - user.py:43 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 17:02:14 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:02:24 - aiogram.dispatcher - WARNING - dispatcher.py:455 - Received SIGTERM signal
+2025-04-03 17:02:24 - smm_bot - INFO - main.py:210 - بدء تنظيف الموارد...
+2025-04-03 17:02:24 - smm_bot - INFO - common.py:104 - بدء تنظيف الموارد...
+2025-04-03 17:02:24 - smm_bot - INFO - common.py:110 - تم إغلاق جلسة API بنجاح
+2025-04-03 17:02:24 - smm_bot - INFO - common.py:118 - تم إغلاق اتصالات قاعدة البيانات بنجاح
+2025-04-03 17:02:24 - smm_bot - INFO - common.py:127 - إلغاء 1 مهمة معلقة
+2025-04-03 17:02:24 - smm_bot - INFO - common.py:134 - اكتمل تنظيف الموارد
+2025-04-03 17:02:24 - smm_bot - INFO - main.py:212 - تم إغلاق البوت وتحرير الموارد بنجاح
+2025-04-03 17:02:24 - smm_bot - INFO - main.py:217 - تم حذف ملف القفل
+2025-04-03 17:02:36 - smm_bot - INFO - main.py:115 - تم إنشاء ملف قفل جديد
+2025-04-03 17:02:36 - smm_bot - INFO - core.py:41 - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity', 'rank_id']
+2025-04-03 17:02:36 - smm_bot - INFO - core.py:70 - إضافة عمود updated_at إلى جدول الطلبات
+2025-04-03 17:02:36 - smm_bot - ERROR - core.py:74 - خطأ في التحقق من أو إضافة عمود updated_at: Cannot add a column with non-constant default
+2025-04-03 17:02:36 - smm_bot - INFO - core.py:94 - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 17:02:36 - smm_bot - INFO - ranks.py:87 - تم تهيئة نظام الرتب بنجاح
+2025-04-03 17:02:36 - smm_bot - INFO - main.py:193 - تم إعداد وسائط البوت
+2025-04-03 17:02:36 - smm_bot - INFO - main.py:142 - تم بدء مهمة مزامنة رصيد المشرف
+2025-04-03 17:02:37 - smm_bot - INFO - main.py:203 - بدء تشغيل البوت
+2025-04-03 17:02:48 - smm_bot - INFO - user.py:43 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 17:02:50 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:02:52 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:02:54 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:03:14 - aiogram.dispatcher - WARNING - dispatcher.py:455 - Received SIGTERM signal
+2025-04-03 17:03:14 - smm_bot - INFO - main.py:210 - بدء تنظيف الموارد...
+2025-04-03 17:03:14 - smm_bot - INFO - common.py:104 - بدء تنظيف الموارد...
+2025-04-03 17:03:14 - smm_bot - INFO - common.py:110 - تم إغلاق جلسة API بنجاح
+2025-04-03 17:03:14 - smm_bot - INFO - common.py:118 - تم إغلاق اتصالات قاعدة البيانات بنجاح
+2025-04-03 17:03:14 - smm_bot - INFO - common.py:127 - إلغاء 1 مهمة معلقة
+2025-04-03 17:03:14 - smm_bot - INFO - common.py:134 - اكتمل تنظيف الموارد
+2025-04-03 17:03:14 - smm_bot - INFO - main.py:212 - تم إغلاق البوت وتحرير الموارد بنجاح
+2025-04-03 17:03:14 - smm_bot - INFO - main.py:217 - تم حذف ملف القفل
+2025-04-03 17:03:20 - smm_bot - INFO - main.py:115 - تم إنشاء ملف قفل جديد
+2025-04-03 17:03:20 - smm_bot - INFO - core.py:41 - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity', 'rank_id']
+2025-04-03 17:03:20 - smm_bot - INFO - core.py:70 - إضافة عمود updated_at إلى جدول الطلبات
+2025-04-03 17:03:20 - smm_bot - ERROR - core.py:74 - خطأ في التحقق من أو إضافة عمود updated_at: Cannot add a column with non-constant default
+2025-04-03 17:03:20 - smm_bot - INFO - core.py:94 - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 17:03:20 - smm_bot - INFO - ranks.py:87 - تم تهيئة نظام الرتب بنجاح
+2025-04-03 17:03:20 - smm_bot - INFO - main.py:193 - تم إعداد وسائط البوت
+2025-04-03 17:03:20 - smm_bot - INFO - main.py:142 - تم بدء مهمة مزامنة رصيد المشرف
+2025-04-03 17:03:20 - smm_bot - INFO - main.py:203 - بدء تشغيل البوت
+2025-04-03 17:05:06 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:06:13 - smm_bot - INFO - user.py:43 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 17:06:14 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:06:16 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:06:19 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:08:45 - aiogram.dispatcher - WARNING - dispatcher.py:455 - Received SIGTERM signal
+2025-04-03 17:08:45 - smm_bot - INFO - main.py:210 - بدء تنظيف الموارد...
+2025-04-03 17:08:45 - smm_bot - INFO - common.py:104 - بدء تنظيف الموارد...
+2025-04-03 17:08:45 - smm_bot - INFO - common.py:110 - تم إغلاق جلسة API بنجاح
+2025-04-03 17:08:45 - smm_bot - INFO - common.py:118 - تم إغلاق اتصالات قاعدة البيانات بنجاح
+2025-04-03 17:08:45 - smm_bot - INFO - common.py:127 - إلغاء 1 مهمة معلقة
+2025-04-03 17:08:45 - smm_bot - INFO - common.py:134 - اكتمل تنظيف الموارد
+2025-04-03 17:08:45 - smm_bot - INFO - main.py:212 - تم إغلاق البوت وتحرير الموارد بنجاح
+2025-04-03 17:08:45 - smm_bot - INFO - main.py:217 - تم حذف ملف القفل
+2025-04-03 17:08:50 - smm_bot - INFO - main.py:115 - تم إنشاء ملف قفل جديد
+2025-04-03 17:08:50 - smm_bot - INFO - core.py:41 - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity', 'rank_id']
+2025-04-03 17:08:50 - smm_bot - INFO - core.py:68 - إضافة عمود updated_at إلى جدول الطلبات
+2025-04-03 17:08:50 - smm_bot - INFO - core.py:94 - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 17:08:50 - smm_bot - INFO - ranks.py:87 - تم تهيئة نظام الرتب بنجاح
+2025-04-03 17:08:50 - smm_bot - INFO - main.py:193 - تم إعداد وسائط البوت
+2025-04-03 17:08:50 - smm_bot - INFO - main.py:142 - تم بدء مهمة مزامنة رصيد المشرف
+2025-04-03 17:08:51 - smm_bot - INFO - main.py:203 - بدء تشغيل البوت
+2025-04-03 17:09:12 - smm_bot - INFO - user.py:43 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 17:09:14 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:09:20 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:09:32 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:09:58 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:10:07 - smm_bot - INFO - user.py:43 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 17:10:11 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:10:16 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:10:18 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:10:20 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:10:27 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:10:32 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:10:41 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:10:59 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:11:11 - smm_bot - INFO - user.py:43 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 17:11:14 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:11:23 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:11:24 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:11:44 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:11:49 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:11:55 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:12:13 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:12:16 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:12:27 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:12:28 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:24:10 - smm_bot - INFO - user.py:43 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 17:24:16 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:24:21 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:24:51 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:25:08 - aiogram.dispatcher - WARNING - dispatcher.py:455 - Received SIGTERM signal
+2025-04-03 17:25:08 - smm_bot - INFO - main.py:210 - بدء تنظيف الموارد...
+2025-04-03 17:25:08 - smm_bot - INFO - common.py:104 - بدء تنظيف الموارد...
+2025-04-03 17:25:08 - smm_bot - INFO - common.py:110 - تم إغلاق جلسة API بنجاح
+2025-04-03 17:25:08 - smm_bot - INFO - common.py:118 - تم إغلاق اتصالات قاعدة البيانات بنجاح
+2025-04-03 17:25:08 - smm_bot - INFO - common.py:127 - إلغاء 1 مهمة معلقة
+2025-04-03 17:25:08 - smm_bot - INFO - common.py:134 - اكتمل تنظيف الموارد
+2025-04-03 17:25:08 - smm_bot - INFO - main.py:212 - تم إغلاق البوت وتحرير الموارد بنجاح
+2025-04-03 17:25:08 - smm_bot - INFO - main.py:217 - تم حذف ملف القفل
+2025-04-03 17:26:18 - smm_bot - INFO - main.py:115 - تم إنشاء ملف قفل جديد
+2025-04-03 17:26:18 - smm_bot - INFO - core.py:65 - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity', 'rank_id']
+2025-04-03 17:26:18 - smm_bot - INFO - core.py:118 - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 17:26:18 - smm_bot - INFO - ranks.py:87 - تم تهيئة نظام الرتب بنجاح
+2025-04-03 17:26:18 - smm_bot - INFO - main.py:193 - تم إعداد وسائط البوت
+2025-04-03 17:26:18 - smm_bot - INFO - main.py:142 - تم بدء مهمة مزامنة رصيد المشرف
+2025-04-03 17:26:19 - smm_bot - INFO - main.py:203 - بدء تشغيل البوت
+2025-04-03 17:26:41 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:26:51 - smm_bot - INFO - user.py:43 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 17:26:54 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:29:30 - aiogram.dispatcher - WARNING - dispatcher.py:455 - Received SIGTERM signal
+2025-04-03 17:29:30 - smm_bot - INFO - main.py:210 - بدء تنظيف الموارد...
+2025-04-03 17:29:30 - smm_bot - INFO - common.py:104 - بدء تنظيف الموارد...
+2025-04-03 17:29:30 - smm_bot - INFO - common.py:110 - تم إغلاق جلسة API بنجاح
+2025-04-03 17:29:30 - smm_bot - INFO - common.py:118 - تم إغلاق اتصالات قاعدة البيانات بنجاح
+2025-04-03 17:29:30 - smm_bot - INFO - common.py:127 - إلغاء 1 مهمة معلقة
+2025-04-03 17:29:30 - smm_bot - INFO - common.py:134 - اكتمل تنظيف الموارد
+2025-04-03 17:29:30 - smm_bot - INFO - main.py:212 - تم إغلاق البوت وتحرير الموارد بنجاح
+2025-04-03 17:29:30 - smm_bot - INFO - main.py:217 - تم حذف ملف القفل
+2025-04-03 17:35:04 - smm_bot - INFO - main.py:115 - تم إنشاء ملف قفل جديد
+2025-04-03 17:35:04 - smm_bot - INFO - core.py:65 - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity', 'rank_id']
+2025-04-03 17:35:04 - smm_bot - INFO - core.py:118 - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 17:35:04 - smm_bot - INFO - ranks.py:87 - تم تهيئة نظام الرتب بنجاح
+2025-04-03 17:35:04 - smm_bot - INFO - main.py:193 - تم إعداد وسائط البوت
+2025-04-03 17:35:04 - smm_bot - INFO - main.py:142 - تم بدء مهمة مزامنة رصيد المشرف
+2025-04-03 17:35:05 - smm_bot - INFO - main.py:203 - بدء تشغيل البوت
+2025-04-03 17:35:17 - smm_bot - INFO - user.py:42 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 17:35:18 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:35:24 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:37:11 - smm_bot - INFO - core.py:173 - تم إنشاء مستخدم جديد: 6104067460, غير محدد
+2025-04-03 17:37:11 - smm_bot - INFO - user.py:50 - تم إنشاء مستخدم جديد: 6104067460, غير محدد, Aymen Tth
+2025-04-03 17:38:05 - smm_bot - ERROR - user.py:955 - خطأ في معالجة مبلغ الإيداع: cannot unpack non-iterable int object
+2025-04-03 17:38:49 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:38:57 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:39:09 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:39:11 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:39:13 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:39:15 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:39:22 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:39:27 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:39:42 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:39:45 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:39:50 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 17:41:01 - smm_bot - INFO - user.py:42 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 18:05:12 - smm_bot - INFO - user.py:42 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 18:24:29 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:33:11 - smm_bot - INFO - main.py:110 - تم إزالة ملف القفل القديم
+2025-04-03 21:33:11 - smm_bot - INFO - main.py:115 - تم إنشاء ملف قفل جديد
+2025-04-03 21:33:11 - smm_bot - INFO - core.py:65 - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity', 'rank_id']
+2025-04-03 21:33:11 - smm_bot - INFO - core.py:118 - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 21:33:11 - smm_bot - INFO - ranks.py:87 - تم تهيئة نظام الرتب بنجاح
+2025-04-03 21:33:11 - smm_bot - INFO - main.py:193 - تم إعداد وسائط البوت
+2025-04-03 21:33:11 - smm_bot - INFO - main.py:142 - تم بدء مهمة مزامنة رصيد المشرف
+2025-04-03 21:33:11 - smm_bot - INFO - main.py:203 - بدء تشغيل البوت
+2025-04-03 21:33:19 - smm_bot - INFO - user.py:42 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 21:38:19 - aiogram.dispatcher - WARNING - dispatcher.py:455 - Received SIGTERM signal
+2025-04-03 21:38:20 - smm_bot - INFO - main.py:210 - بدء تنظيف الموارد...
+2025-04-03 21:38:20 - smm_bot - INFO - common.py:104 - بدء تنظيف الموارد...
+2025-04-03 21:38:20 - smm_bot - INFO - common.py:110 - تم إغلاق جلسة API بنجاح
+2025-04-03 21:38:20 - smm_bot - INFO - common.py:118 - تم إغلاق اتصالات قاعدة البيانات بنجاح
+2025-04-03 21:38:20 - smm_bot - INFO - common.py:127 - إلغاء 1 مهمة معلقة
+2025-04-03 21:38:20 - smm_bot - INFO - common.py:134 - اكتمل تنظيف الموارد
+2025-04-03 21:38:20 - smm_bot - INFO - main.py:212 - تم إغلاق البوت وتحرير الموارد بنجاح
+2025-04-03 21:38:20 - smm_bot - INFO - main.py:217 - تم حذف ملف القفل
+2025-04-03 21:42:51 - smm_bot - INFO - main.py:115 - تم إنشاء ملف قفل جديد
+2025-04-03 21:42:51 - smm_bot - INFO - core.py:64 - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity', 'rank_id']
+2025-04-03 21:42:51 - smm_bot - INFO - core.py:117 - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 21:42:51 - smm_bot - INFO - ranks.py:87 - تم تهيئة نظام الرتب بنجاح
+2025-04-03 21:42:51 - smm_bot - INFO - main.py:193 - تم إعداد وسائط البوت
+2025-04-03 21:42:51 - smm_bot - INFO - main.py:142 - تم بدء مهمة مزامنة رصيد المشرف
+2025-04-03 21:42:51 - smm_bot - INFO - main.py:203 - بدء تشغيل البوت
+2025-04-03 21:43:12 - smm_bot - INFO - user.py:42 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 21:43:14 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:43:22 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:43:40 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:43:40 - smm_bot - INFO - admin.py:81 - دخول مشرف للوحة التحكم التفصيلية: 5464520756
+2025-04-03 21:43:46 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:43:48 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:43:50 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:43:50 - smm_bot - ERROR - core.py:545 - خطأ في استرجاع آخر الطلبات: name 'dict_factory' is not defined
+2025-04-03 21:43:52 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:43:54 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:43:56 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:45:57 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:46:01 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:46:12 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:46:15 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:46:18 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:46:18 - smm_bot - INFO - admin.py:81 - دخول مشرف للوحة التحكم التفصيلية: 5464520756
+2025-04-03 21:46:21 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:47:10 - aiogram.dispatcher - WARNING - dispatcher.py:455 - Received SIGTERM signal
+2025-04-03 21:47:10 - smm_bot - INFO - main.py:210 - بدء تنظيف الموارد...
+2025-04-03 21:47:10 - smm_bot - INFO - common.py:104 - بدء تنظيف الموارد...
+2025-04-03 21:47:10 - smm_bot - INFO - common.py:110 - تم إغلاق جلسة API بنجاح
+2025-04-03 21:47:10 - smm_bot - INFO - common.py:118 - تم إغلاق اتصالات قاعدة البيانات بنجاح
+2025-04-03 21:47:10 - smm_bot - INFO - common.py:127 - إلغاء 1 مهمة معلقة
+2025-04-03 21:47:10 - smm_bot - INFO - common.py:134 - اكتمل تنظيف الموارد
+2025-04-03 21:47:10 - smm_bot - INFO - main.py:212 - تم إغلاق البوت وتحرير الموارد بنجاح
+2025-04-03 21:47:10 - smm_bot - INFO - main.py:217 - تم حذف ملف القفل
+2025-04-03 21:47:15 - smm_bot - INFO - main.py:115 - تم إنشاء ملف قفل جديد
+2025-04-03 21:47:15 - smm_bot - INFO - core.py:64 - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity', 'rank_id']
+2025-04-03 21:47:15 - smm_bot - INFO - core.py:117 - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 21:47:15 - smm_bot - INFO - ranks.py:87 - تم تهيئة نظام الرتب بنجاح
+2025-04-03 21:47:15 - smm_bot - INFO - main.py:193 - تم إعداد وسائط البوت
+2025-04-03 21:47:15 - smm_bot - INFO - main.py:142 - تم بدء مهمة مزامنة رصيد المشرف
+2025-04-03 21:47:15 - smm_bot - INFO - main.py:203 - بدء تشغيل البوت
+2025-04-03 21:47:27 - smm_bot - INFO - user.py:42 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 21:47:31 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:47:34 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:47:34 - smm_bot - INFO - admin.py:81 - دخول مشرف للوحة التحكم التفصيلية: 5464520756
+2025-04-03 21:47:36 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:47:37 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:47:40 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:47:40 - smm_bot - INFO - admin.py:81 - دخول مشرف للوحة التحكم التفصيلية: 5464520756
+2025-04-03 21:47:41 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:47:43 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:47:51 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:47:51 - smm_bot - INFO - admin.py:81 - دخول مشرف للوحة التحكم التفصيلية: 5464520756
+2025-04-03 21:47:56 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:47:57 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:47:57 - smm_bot - ERROR - core.py:545 - خطأ في استرجاع آخر الطلبات: name 'dict_factory' is not defined
+2025-04-03 21:48:04 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:48:07 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:48:09 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:48:09 - smm_bot - INFO - admin.py:81 - دخول مشرف للوحة التحكم التفصيلية: 5464520756
+2025-04-03 21:48:14 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:48:16 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:48:19 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:48:20 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:48:20 - smm_bot - INFO - admin.py:81 - دخول مشرف للوحة التحكم التفصيلية: 5464520756
+2025-04-03 21:48:21 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:48:23 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:48:26 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:48:27 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:48:30 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:48:32 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:48:34 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:48:39 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:48:40 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:50:29 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:50:32 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:50:36 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:50:36 - smm_bot - INFO - admin.py:81 - دخول مشرف للوحة التحكم التفصيلية: 5464520756
+2025-04-03 21:50:38 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:50:42 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:50:44 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:50:56 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:50:59 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:50:59 - smm_bot - INFO - admin.py:81 - دخول مشرف للوحة التحكم التفصيلية: 5464520756
+2025-04-03 21:51:01 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:51:05 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:51:22 - aiogram.dispatcher - WARNING - dispatcher.py:455 - Received SIGTERM signal
+2025-04-03 21:51:22 - smm_bot - INFO - main.py:210 - بدء تنظيف الموارد...
+2025-04-03 21:51:22 - smm_bot - INFO - common.py:104 - بدء تنظيف الموارد...
+2025-04-03 21:51:22 - smm_bot - INFO - common.py:110 - تم إغلاق جلسة API بنجاح
+2025-04-03 21:51:22 - smm_bot - INFO - common.py:118 - تم إغلاق اتصالات قاعدة البيانات بنجاح
+2025-04-03 21:51:22 - smm_bot - INFO - common.py:127 - إلغاء 1 مهمة معلقة
+2025-04-03 21:51:22 - smm_bot - INFO - common.py:134 - اكتمل تنظيف الموارد
+2025-04-03 21:51:22 - smm_bot - INFO - main.py:212 - تم إغلاق البوت وتحرير الموارد بنجاح
+2025-04-03 21:51:22 - smm_bot - INFO - main.py:217 - تم حذف ملف القفل
+2025-04-03 21:51:27 - smm_bot - INFO - main.py:115 - تم إنشاء ملف قفل جديد
+2025-04-03 21:51:27 - smm_bot - INFO - core.py:64 - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity', 'rank_id']
+2025-04-03 21:51:27 - smm_bot - INFO - core.py:117 - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 21:51:27 - smm_bot - INFO - ranks.py:87 - تم تهيئة نظام الرتب بنجاح
+2025-04-03 21:51:27 - smm_bot - INFO - main.py:193 - تم إعداد وسائط البوت
+2025-04-03 21:51:27 - smm_bot - INFO - main.py:142 - تم بدء مهمة مزامنة رصيد المشرف
+2025-04-03 21:51:27 - smm_bot - INFO - main.py:203 - بدء تشغيل البوت
+2025-04-03 21:51:45 - smm_bot - INFO - user.py:42 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 21:51:48 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:51:51 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 21:51:51 - smm_bot - ERROR - admin.py:2810 - خطأ في عرض معلومات النظام: No module named 'psutil'
+2025-04-03 22:12:14 - smm_bot - INFO - main.py:110 - تم إزالة ملف القفل القديم
+2025-04-03 22:12:14 - smm_bot - INFO - main.py:115 - تم إنشاء ملف قفل جديد
+2025-04-03 22:12:14 - smm_bot - INFO - core.py:64 - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity', 'rank_id']
+2025-04-03 22:12:14 - smm_bot - INFO - core.py:117 - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 22:12:14 - smm_bot - INFO - ranks.py:87 - تم تهيئة نظام الرتب بنجاح
+2025-04-03 22:12:14 - smm_bot - INFO - main.py:193 - تم إعداد وسائط البوت
+2025-04-03 22:12:14 - smm_bot - INFO - main.py:142 - تم بدء مهمة مزامنة رصيد المشرف
+2025-04-03 22:12:14 - smm_bot - INFO - main.py:203 - بدء تشغيل البوت
+2025-04-03 22:12:26 - smm_bot - INFO - user.py:42 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 22:12:41 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 22:12:43 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 22:12:44 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 22:12:44 - aiogram.event - ERROR - dispatcher.py:315 - Cause exception while process update id=190429371 by bot id=7209041503
+TypeError: error_handler() missing 1 required positional argument: 'exception'
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/utils/middleware.py", line 39, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/utils/middleware.py", line 77, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/utils/chat_action.py", line 379, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/admin.py", line 42, in admin_filter
+    return await handler(message, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/admin.py", line 226, in manage_users_from_main
+    await manage_users(message, state)
+  File "/home/runner/workspace/handlers/admin.py", line 358, in manage_users
+    users, total = await get_all_users()
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/database/core.py", line 692, in get_all_users
+    "rank_id": row[7]
+               ~~~^^^
+IndexError: tuple index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 29, in __call__
+    response = await self.router.propagate_event(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+                 ^^^^^^^^^
+TypeError: error_handler() missing 1 required positional argument: 'exception'
+2025-04-03 22:13:18 - smm_bot - INFO - user.py:42 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 22:13:35 - smm_bot - INFO - user.py:42 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 22:13:49 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 22:13:49 - smm_bot - INFO - admin.py:59 - دخول مشرف للوحة التحكم: 5464520756
+2025-04-03 22:14:51 - aiogram.dispatcher - WARNING - dispatcher.py:455 - Received SIGTERM signal
+2025-04-03 22:14:51 - smm_bot - INFO - main.py:210 - بدء تنظيف الموارد...
+2025-04-03 22:14:51 - smm_bot - INFO - common.py:104 - بدء تنظيف الموارد...
+2025-04-03 22:14:51 - smm_bot - INFO - common.py:110 - تم إغلاق جلسة API بنجاح
+2025-04-03 22:14:51 - smm_bot - INFO - common.py:118 - تم إغلاق اتصالات قاعدة البيانات بنجاح
+2025-04-03 22:14:51 - smm_bot - INFO - common.py:127 - إلغاء 1 مهمة معلقة
+2025-04-03 22:14:51 - smm_bot - INFO - common.py:134 - اكتمل تنظيف الموارد
+2025-04-03 22:14:51 - smm_bot - INFO - main.py:212 - تم إغلاق البوت وتحرير الموارد بنجاح
+2025-04-03 22:14:51 - smm_bot - INFO - main.py:217 - تم حذف ملف القفل
+2025-04-03 22:20:16 - smm_bot - INFO - main.py:115 - تم إنشاء ملف قفل جديد
+2025-04-03 22:20:16 - smm_bot - INFO - core.py:64 - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity', 'rank_id']
+2025-04-03 22:20:16 - smm_bot - INFO - core.py:117 - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 22:20:16 - smm_bot - INFO - ranks.py:87 - تم تهيئة نظام الرتب بنجاح
+2025-04-03 22:20:16 - smm_bot - INFO - main.py:193 - تم إعداد وسائط البوت
+2025-04-03 22:20:16 - smm_bot - INFO - main.py:142 - تم بدء مهمة مزامنة رصيد المشرف
+2025-04-03 22:20:16 - smm_bot - INFO - api.py:55 - تم تهيئة موكل API بنجاح. URL: https://garren.store/api/v2
+2025-04-03 22:20:16 - smm_bot - INFO - main.py:203 - بدء تشغيل البوت
+2025-04-03 22:20:33 - smm_bot - INFO - user.py:41 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 22:20:41 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 22:20:41 - aiogram.event - ERROR - dispatcher.py:315 - Cause exception while process update id=190429390 by bot id=7209041503
+TypeError: error_handler() missing 1 required positional argument: 'exception'
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/utils/middleware.py", line 39, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/utils/middleware.py", line 77, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/utils/chat_action.py", line 379, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/admin.py", line 42, in admin_filter
+    return await handler(message, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/admin.py", line 226, in manage_users_from_main
+    await manage_users(message, state)
+  File "/home/runner/workspace/handlers/admin.py", line 358, in manage_users
+    users, total = await get_all_users()
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/database/core.py", line 692, in get_all_users
+    "rank_id": row[7]
+               ~~~^^^
+IndexError: tuple index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 29, in __call__
+    response = await self.router.propagate_event(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+                 ^^^^^^^^^
+TypeError: error_handler() missing 1 required positional argument: 'exception'
+2025-04-03 22:20:57 - smm_bot - INFO - user.py:41 - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 22:20:58 - smm_bot - INFO - admin.py:41 - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 22:20:59 - aiogram.event - ERROR - dispatcher.py:315 - Cause exception while process update id=190429393 by bot id=7209041503
+TypeError: error_handler() missing 1 required positional argument: 'exception'
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/utils/middleware.py", line 39, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/utils/middleware.py", line 77, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/utils/chat_action.py", line 379, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/admin.py", line 42, in admin_filter
+    return await handler(message, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/admin.py", line 226, in manage_users_from_main
+    await manage_users(message, state)
+  File "/home/runner/workspace/handlers/admin.py", line 358, in manage_users
+    users, total = await get_all_users()
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/database/core.py", line 692, in get_all_users
+    "rank_id": row[7]
+               ~~~^^^
+IndexError: tuple index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 29, in __call__
+    response = await self.router.propagate_event(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+                 ^^^^^^^^^
+TypeError: error_handler() missing 1 required positional argument: 'exception'
+2025-04-03 22:21:42 - aiogram.dispatcher - WARNING - dispatcher.py:455 - Received SIGTERM signal
+2025-04-03 22:21:43 - smm_bot - INFO - main.py:210 - بدء تنظيف الموارد...
+2025-04-03 22:21:43 - smm_bot - INFO - common.py:104 - بدء تنظيف الموارد...
+2025-04-03 22:21:43 - smm_bot - INFO - common.py:110 - تم إغلاق جلسة API بنجاح
+2025-04-03 22:21:43 - smm_bot - INFO - common.py:118 - تم إغلاق اتصالات قاعدة البيانات بنجاح
+2025-04-03 22:21:43 - smm_bot - INFO - common.py:127 - إلغاء 1 مهمة معلقة
+2025-04-03 22:21:43 - smm_bot - INFO - common.py:134 - اكتمل تنظيف الموارد
+2025-04-03 22:21:43 - smm_bot - INFO - main.py:212 - تم إغلاق البوت وتحرير الموارد بنجاح
+2025-04-03 22:21:43 - smm_bot - INFO - main.py:217 - تم حذف ملف القفل
+2025-04-03 22:21:46 - smm_bot - INFO - main.py:115 - تم إنشاء ملف قفل جديد
+2025-04-03 22:21:46 - smm_bot - INFO - core.py:64 - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity', 'rank_id']
+2025-04-03 22:21:46 - smm_bot - INFO - core.py:117 - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 22:21:46 - smm_bot - INFO - ranks.py:87 - تم تهيئة نظام الرتب بنجاح
+2025-04-03 22:21:46 - smm_bot - INFO - main.py:193 - تم إعداد وسائط البوت
+2025-04-03 22:21:46 - smm_bot - INFO - main.py:142 - تم بدء مهمة مزامنة رصيد المشرف
+2025-04-03 22:21:46 - smm_bot - INFO - api.py:55 - تم تهيئة موكل API بنجاح. URL: https://garren.store/api/v2
+2025-04-03 22:21:47 - smm_bot - INFO - main.py:203 - بدء تشغيل البوت
+2025-04-03 22:22:38 - aiogram.dispatcher - WARNING - dispatcher.py:455 - Received SIGTERM signal
+2025-04-03 22:22:39 - smm_bot - INFO - main.py:210 - بدء تنظيف الموارد...
+2025-04-03 22:22:39 - smm_bot - INFO - common.py:104 - بدء تنظيف الموارد...
+2025-04-03 22:22:39 - smm_bot - INFO - common.py:110 - تم إغلاق جلسة API بنجاح
+2025-04-03 22:22:39 - smm_bot - INFO - common.py:118 - تم إغلاق اتصالات قاعدة البيانات بنجاح
+2025-04-03 22:22:39 - smm_bot - INFO - common.py:127 - إلغاء 1 مهمة معلقة
+2025-04-03 22:22:39 - smm_bot - INFO - common.py:134 - اكتمل تنظيف الموارد
+2025-04-03 22:22:39 - smm_bot - INFO - main.py:212 - تم إغلاق البوت وتحرير الموارد بنجاح
+2025-04-03 22:22:39 - smm_bot - INFO - main.py:217 - تم حذف ملف القفل

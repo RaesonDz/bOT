@@ -1,0 +1,785 @@
+2025-04-04 07:30:58,569 - smm_bot - WARNING - تم إزالة ملف القفل القديم: bot.lock
+2025-04-04 07:30:58,569 - asyncio - DEBUG - Using selector: EpollSelector
+2025-04-04 07:30:58,570 - smm_bot - INFO - بدء تهيئة قاعدة البيانات...
+2025-04-04 07:30:58,570 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9e360ccfe0>
+2025-04-04 07:30:58,571 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9e360ccfe0> completed
+2025-04-04 07:30:58,571 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085c60>, '\n        CREATE TABLE IF NOT EXISTS users (\n            user_id INTEGER PRIMARY KEY,\n            username TEXT,\n            full_name TEXT,\n            balance REAL DEFAULT 0,\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            last_activity TIMESTAMP\n        )\n        ', [])
+2025-04-04 07:30:58,572 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085c60>, '\n        CREATE TABLE IF NOT EXISTS users (\n            user_id INTEGER PRIMARY KEY,\n            username TEXT,\n            full_name TEXT,\n            balance REAL DEFAULT 0,\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            last_activity TIMESTAMP\n        )\n        ', []) completed
+2025-04-04 07:30:58,572 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085c60>, 'PRAGMA table_info(users)', [])
+2025-04-04 07:30:58,572 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085c60>, 'PRAGMA table_info(users)', []) completed
+2025-04-04 07:30:58,573 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9e36fb5fc0>)
+2025-04-04 07:30:58,573 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9e36fb5fc0>) completed
+2025-04-04 07:30:58,573 - smm_bot - INFO - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity', 'rank_id']
+2025-04-04 07:30:58,573 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085c60>, "\n        CREATE TABLE IF NOT EXISTS orders (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            order_id TEXT,\n            user_id INTEGER,\n            service_id INTEGER,\n            service_name TEXT,\n            link TEXT,\n            quantity INTEGER,\n            amount REAL,\n            status TEXT DEFAULT 'Pending',\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            FOREIGN KEY (user_id) REFERENCES users (user_id)\n        )\n        ", [])
+2025-04-04 07:30:58,573 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085c60>, "\n        CREATE TABLE IF NOT EXISTS orders (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            order_id TEXT,\n            user_id INTEGER,\n            service_id INTEGER,\n            service_name TEXT,\n            link TEXT,\n            quantity INTEGER,\n            amount REAL,\n            status TEXT DEFAULT 'Pending',\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            FOREIGN KEY (user_id) REFERENCES users (user_id)\n        )\n        ", []) completed
+2025-04-04 07:30:58,573 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085c60>, 'PRAGMA table_info(orders)', [])
+2025-04-04 07:30:58,573 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085c60>, 'PRAGMA table_info(orders)', []) completed
+2025-04-04 07:30:58,574 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9e36fb5c40>)
+2025-04-04 07:30:58,574 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9e36fb5c40>) completed
+2025-04-04 07:30:58,574 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085c60>, "\n        CREATE TABLE IF NOT EXISTS deposits (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            user_id INTEGER,\n            amount REAL,\n            payment_method TEXT,\n            receipt_url TEXT,\n            status TEXT DEFAULT 'pending',\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            updated_at TIMESTAMP,\n            FOREIGN KEY (user_id) REFERENCES users (user_id)\n        )\n        ", [])
+2025-04-04 07:30:58,574 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085c60>, "\n        CREATE TABLE IF NOT EXISTS deposits (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            user_id INTEGER,\n            amount REAL,\n            payment_method TEXT,\n            receipt_url TEXT,\n            status TEXT DEFAULT 'pending',\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            updated_at TIMESTAMP,\n            FOREIGN KEY (user_id) REFERENCES users (user_id)\n        )\n        ", []) completed
+2025-04-04 07:30:58,574 - aiosqlite - DEBUG - executing functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f9e36085c60>)
+2025-04-04 07:30:58,574 - aiosqlite - DEBUG - operation functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f9e36085c60>) completed
+2025-04-04 07:30:58,574 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9e36085c60>)
+2025-04-04 07:30:58,575 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9e36085c60>) completed
+2025-04-04 07:30:58,575 - smm_bot - INFO - تم تهيئة قاعدة البيانات بنجاح
+2025-04-04 07:30:58,575 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9e360ccfe0>
+2025-04-04 07:30:58,575 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9e360ccfe0> completed
+2025-04-04 07:30:58,576 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085a80>, "\n        CREATE TABLE IF NOT EXISTS deposits (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            user_id INTEGER,\n            amount REAL,\n            payment_method TEXT,\n            receipt_url TEXT,\n            receipt_info TEXT,\n            status TEXT DEFAULT 'pending',\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            updated_at TIMESTAMP,\n            admin_id INTEGER,\n            admin_note TEXT,\n            transaction_id TEXT,\n            FOREIGN KEY (user_id) REFERENCES users (user_id)\n        )\n        ", [])
+2025-04-04 07:30:58,576 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085a80>, "\n        CREATE TABLE IF NOT EXISTS deposits (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            user_id INTEGER,\n            amount REAL,\n            payment_method TEXT,\n            receipt_url TEXT,\n            receipt_info TEXT,\n            status TEXT DEFAULT 'pending',\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            updated_at TIMESTAMP,\n            admin_id INTEGER,\n            admin_note TEXT,\n            transaction_id TEXT,\n            FOREIGN KEY (user_id) REFERENCES users (user_id)\n        )\n        ", []) completed
+2025-04-04 07:30:58,576 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085a80>, 'PRAGMA table_info(deposits)', [])
+2025-04-04 07:30:58,576 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085a80>, 'PRAGMA table_info(deposits)', []) completed
+2025-04-04 07:30:58,576 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9e36fb5fc0>)
+2025-04-04 07:30:58,577 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9e36fb5fc0>) completed
+2025-04-04 07:30:58,577 - aiosqlite - DEBUG - executing functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f9e36085a80>)
+2025-04-04 07:30:58,577 - aiosqlite - DEBUG - operation functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f9e36085a80>) completed
+2025-04-04 07:30:58,577 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-04 07:30:58,577 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9e36085a80>)
+2025-04-04 07:30:58,577 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9e36085a80>) completed
+2025-04-04 07:30:58,577 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9e360ccf40>
+2025-04-04 07:30:58,578 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9e360ccf40> completed
+2025-04-04 07:30:58,578 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085e40>, '\n            CREATE TABLE IF NOT EXISTS ranks (\n                id INTEGER PRIMARY KEY,\n                name TEXT NOT NULL,\n                min_balance REAL DEFAULT 0,\n                features TEXT,\n                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n            )\n            ', [])
+2025-04-04 07:30:58,578 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085e40>, '\n            CREATE TABLE IF NOT EXISTS ranks (\n                id INTEGER PRIMARY KEY,\n                name TEXT NOT NULL,\n                min_balance REAL DEFAULT 0,\n                features TEXT,\n                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n            )\n            ', []) completed
+2025-04-04 07:30:58,578 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085e40>, 'PRAGMA table_info(users)', [])
+2025-04-04 07:30:58,578 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085e40>, 'PRAGMA table_info(users)', []) completed
+2025-04-04 07:30:58,579 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9e36fb6040>)
+2025-04-04 07:30:58,579 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9e36fb6040>) completed
+2025-04-04 07:30:58,579 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085e40>, 'SELECT id FROM ranks WHERE id = ?', (1,))
+2025-04-04 07:30:58,580 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085e40>, 'SELECT id FROM ranks WHERE id = ?', (1,)) completed
+2025-04-04 07:30:58,580 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e36fb5c40>)
+2025-04-04 07:30:58,580 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e36fb5c40>) completed
+2025-04-04 07:30:58,580 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085e40>, 'SELECT id FROM ranks WHERE id = ?', (2,))
+2025-04-04 07:30:58,580 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085e40>, 'SELECT id FROM ranks WHERE id = ?', (2,)) completed
+2025-04-04 07:30:58,580 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e36fb6040>)
+2025-04-04 07:30:58,580 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e36fb6040>) completed
+2025-04-04 07:30:58,581 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085e40>, 'SELECT id FROM ranks WHERE id = ?', (3,))
+2025-04-04 07:30:58,581 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085e40>, 'SELECT id FROM ranks WHERE id = ?', (3,)) completed
+2025-04-04 07:30:58,581 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e36fb5c40>)
+2025-04-04 07:30:58,581 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e36fb5c40>) completed
+2025-04-04 07:30:58,581 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085e40>, 'SELECT id FROM ranks WHERE id = ?', (4,))
+2025-04-04 07:30:58,581 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085e40>, 'SELECT id FROM ranks WHERE id = ?', (4,)) completed
+2025-04-04 07:30:58,581 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e36fb6040>)
+2025-04-04 07:30:58,581 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e36fb6040>) completed
+2025-04-04 07:30:58,581 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085e40>, 'SELECT id FROM ranks WHERE id = ?', (5,))
+2025-04-04 07:30:58,582 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e36085e40>, 'SELECT id FROM ranks WHERE id = ?', (5,)) completed
+2025-04-04 07:30:58,582 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e36fb5c40>)
+2025-04-04 07:30:58,582 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e36fb5c40>) completed
+2025-04-04 07:30:58,582 - aiosqlite - DEBUG - executing functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f9e36085e40>)
+2025-04-04 07:30:58,582 - aiosqlite - DEBUG - operation functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f9e36085e40>) completed
+2025-04-04 07:30:58,582 - smm_bot - INFO - تم تهيئة نظام الرتب بنجاح
+2025-04-04 07:30:58,582 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9e36085e40>)
+2025-04-04 07:30:58,582 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9e36085e40>) completed
+2025-04-04 07:30:58,582 - smm_bot - INFO - اكتملت تهيئة قاعدة البيانات
+2025-04-04 07:30:58,954 - smm_bot - INFO - بدء تشغيل البوت: @SmmDz_bot
+2025-04-04 07:30:58,955 - aiogram.dispatcher - INFO - Start polling
+2025-04-04 07:30:59,073 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-04 07:31:19,458 - smm_bot - INFO - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-04 07:31:19,458 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9e383d87c0>
+2025-04-04 07:31:19,458 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9e383d87c0> completed
+2025-04-04 07:31:19,459 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e360876a0>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:31:19,459 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e360876a0>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:31:19,459 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e383dc040>)
+2025-04-04 07:31:19,459 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e383dc040>) completed
+2025-04-04 07:31:19,460 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9e360876a0>)
+2025-04-04 07:31:19,460 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9e360876a0>) completed
+2025-04-04 07:31:19,460 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9e3a0dcb80>
+2025-04-04 07:31:19,461 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9e3a0dcb80> completed
+2025-04-04 07:31:19,461 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e360871f0>, 'SELECT rank_id FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:31:19,461 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e360871f0>, 'SELECT rank_id FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:31:19,461 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e383dc040>)
+2025-04-04 07:31:19,461 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e383dc040>) completed
+2025-04-04 07:31:19,461 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e360871f0>, 'SELECT * FROM ranks WHERE id = ?', (5,))
+2025-04-04 07:31:19,461 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e360871f0>, 'SELECT * FROM ranks WHERE id = ?', (5,)) completed
+2025-04-04 07:31:19,462 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e383de740>)
+2025-04-04 07:31:19,462 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e383de740>) completed
+2025-04-04 07:31:19,462 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9e360871f0>)
+2025-04-04 07:31:19,462 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9e360871f0>) completed
+2025-04-04 07:31:19,854 - aiogram.event - INFO - Update id=190429614 is handled. Duration 400 ms by bot id=7209041503
+2025-04-04 07:31:21,950 - smm_bot - INFO - تم تهيئة جلسة API
+2025-04-04 07:31:22,643 - smm_bot - INFO - تم استرجاع 1191 خدمة من API
+2025-04-04 07:31:22,938 - aiogram.event - INFO - Update id=190429615 is handled. Duration 992 ms by bot id=7209041503
+2025-04-04 07:32:05,992 - aiogram.event - INFO - Update id=190429616 is handled. Duration 151 ms by bot id=7209041503
+2025-04-04 07:32:07,802 - aiogram.event - INFO - Update id=190429617 is not handled. Duration 5 ms by bot id=7209041503
+2025-04-04 07:32:07,802 - aiogram.event - ERROR - Cause exception while process update id=190429617 by bot id=7209041503
+NameError: name 'format_service_info' is not defined
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/user.py", line 263, in process_service_selection
+    service_text = format_service_info(selected_service)
+                   ^^^^^^^^^^^^^^^^^^^
+NameError: name 'format_service_info' is not defined
+2025-04-04 07:32:14,487 - aiogram.event - INFO - Update id=190429618 is handled. Duration 181 ms by bot id=7209041503
+2025-04-04 07:32:22,351 - smm_bot - INFO - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-04 07:32:22,351 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9e383d9d00>
+2025-04-04 07:32:22,351 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9e383d9d00> completed
+2025-04-04 07:32:22,351 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e34ec3880>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:32:22,352 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e34ec3880>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:32:22,352 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e34ee1740>)
+2025-04-04 07:32:22,352 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e34ee1740>) completed
+2025-04-04 07:32:22,352 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9e34ec3880>)
+2025-04-04 07:32:22,352 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9e34ec3880>) completed
+2025-04-04 07:32:22,353 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9e360cd3a0>
+2025-04-04 07:32:22,353 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9e360cd3a0> completed
+2025-04-04 07:32:22,353 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e34ec3880>, 'SELECT rank_id FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:32:22,354 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e34ec3880>, 'SELECT rank_id FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:32:22,354 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e34ee1740>)
+2025-04-04 07:32:22,354 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e34ee1740>) completed
+2025-04-04 07:32:22,354 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e34ec3880>, 'SELECT * FROM ranks WHERE id = ?', (5,))
+2025-04-04 07:32:22,354 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9e34ec3880>, 'SELECT * FROM ranks WHERE id = ?', (5,)) completed
+2025-04-04 07:32:22,354 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e34ee1840>)
+2025-04-04 07:32:22,354 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9e34ee1840>) completed
+2025-04-04 07:32:22,355 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9e34ec3880>)
+2025-04-04 07:32:22,355 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9e34ec3880>) completed
+2025-04-04 07:32:22,522 - aiogram.event - INFO - Update id=190429619 is handled. Duration 175 ms by bot id=7209041503
+2025-04-04 07:37:54,495 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-04-04 07:37:54,495 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-04 07:37:54,495 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-04 07:37:54,746 - smm_bot - INFO - بدء تنظيف الموارد...
+2025-04-04 07:37:54,746 - smm_bot - INFO - تم إغلاق جلسة API
+2025-04-04 07:37:54,746 - smm_bot - INFO - تم إغلاق جلسة API
+2025-04-04 07:37:54,746 - smm_bot - INFO - تم إغلاق جلسة البوت
+2025-04-04 07:37:54,747 - smm_bot - INFO - اكتمل تنظيف الموارد
+2025-04-04 07:39:51,184 - asyncio - DEBUG - Using selector: EpollSelector
+2025-04-04 07:39:51,184 - smm_bot - INFO - بدء تهيئة قاعدة البيانات...
+2025-04-04 07:39:51,185 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c8ae3a8e0>
+2025-04-04 07:39:51,185 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c8ae3a8e0> completed
+2025-04-04 07:39:51,185 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9b70>, '\n        CREATE TABLE IF NOT EXISTS users (\n            user_id INTEGER PRIMARY KEY,\n            username TEXT,\n            full_name TEXT,\n            balance REAL DEFAULT 0,\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            last_activity TIMESTAMP\n        )\n        ', [])
+2025-04-04 07:39:51,186 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9b70>, '\n        CREATE TABLE IF NOT EXISTS users (\n            user_id INTEGER PRIMARY KEY,\n            username TEXT,\n            full_name TEXT,\n            balance REAL DEFAULT 0,\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            last_activity TIMESTAMP\n        )\n        ', []) completed
+2025-04-04 07:39:51,186 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9b70>, 'PRAGMA table_info(users)', [])
+2025-04-04 07:39:51,186 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9b70>, 'PRAGMA table_info(users)', []) completed
+2025-04-04 07:39:51,187 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c8bd0e0c0>)
+2025-04-04 07:39:51,187 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c8bd0e0c0>) completed
+2025-04-04 07:39:51,187 - smm_bot - INFO - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity', 'rank_id']
+2025-04-04 07:39:51,187 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9b70>, "\n        CREATE TABLE IF NOT EXISTS orders (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            order_id TEXT,\n            user_id INTEGER,\n            service_id INTEGER,\n            service_name TEXT,\n            link TEXT,\n            quantity INTEGER,\n            amount REAL,\n            status TEXT DEFAULT 'Pending',\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            FOREIGN KEY (user_id) REFERENCES users (user_id)\n        )\n        ", [])
+2025-04-04 07:39:51,187 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9b70>, "\n        CREATE TABLE IF NOT EXISTS orders (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            order_id TEXT,\n            user_id INTEGER,\n            service_id INTEGER,\n            service_name TEXT,\n            link TEXT,\n            quantity INTEGER,\n            amount REAL,\n            status TEXT DEFAULT 'Pending',\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            FOREIGN KEY (user_id) REFERENCES users (user_id)\n        )\n        ", []) completed
+2025-04-04 07:39:51,188 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9b70>, 'PRAGMA table_info(orders)', [])
+2025-04-04 07:39:51,188 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9b70>, 'PRAGMA table_info(orders)', []) completed
+2025-04-04 07:39:51,188 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c8bd0e540>)
+2025-04-04 07:39:51,188 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c8bd0e540>) completed
+2025-04-04 07:39:51,188 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9b70>, "\n        CREATE TABLE IF NOT EXISTS deposits (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            user_id INTEGER,\n            amount REAL,\n            payment_method TEXT,\n            receipt_url TEXT,\n            status TEXT DEFAULT 'pending',\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            updated_at TIMESTAMP,\n            FOREIGN KEY (user_id) REFERENCES users (user_id)\n        )\n        ", [])
+2025-04-04 07:39:51,188 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9b70>, "\n        CREATE TABLE IF NOT EXISTS deposits (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            user_id INTEGER,\n            amount REAL,\n            payment_method TEXT,\n            receipt_url TEXT,\n            status TEXT DEFAULT 'pending',\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            updated_at TIMESTAMP,\n            FOREIGN KEY (user_id) REFERENCES users (user_id)\n        )\n        ", []) completed
+2025-04-04 07:39:51,189 - aiosqlite - DEBUG - executing functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f9c8adf9b70>)
+2025-04-04 07:39:51,189 - aiosqlite - DEBUG - operation functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f9c8adf9b70>) completed
+2025-04-04 07:39:51,189 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c8adf9b70>)
+2025-04-04 07:39:51,189 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c8adf9b70>) completed
+2025-04-04 07:39:51,189 - smm_bot - INFO - تم تهيئة قاعدة البيانات بنجاح
+2025-04-04 07:39:51,190 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c8ae3a8e0>
+2025-04-04 07:39:51,190 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c8ae3a8e0> completed
+2025-04-04 07:39:51,190 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9990>, "\n        CREATE TABLE IF NOT EXISTS deposits (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            user_id INTEGER,\n            amount REAL,\n            payment_method TEXT,\n            receipt_url TEXT,\n            receipt_info TEXT,\n            status TEXT DEFAULT 'pending',\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            updated_at TIMESTAMP,\n            admin_id INTEGER,\n            admin_note TEXT,\n            transaction_id TEXT,\n            FOREIGN KEY (user_id) REFERENCES users (user_id)\n        )\n        ", [])
+2025-04-04 07:39:51,190 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9990>, "\n        CREATE TABLE IF NOT EXISTS deposits (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            user_id INTEGER,\n            amount REAL,\n            payment_method TEXT,\n            receipt_url TEXT,\n            receipt_info TEXT,\n            status TEXT DEFAULT 'pending',\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n            updated_at TIMESTAMP,\n            admin_id INTEGER,\n            admin_note TEXT,\n            transaction_id TEXT,\n            FOREIGN KEY (user_id) REFERENCES users (user_id)\n        )\n        ", []) completed
+2025-04-04 07:39:51,190 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9990>, 'PRAGMA table_info(deposits)', [])
+2025-04-04 07:39:51,191 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9990>, 'PRAGMA table_info(deposits)', []) completed
+2025-04-04 07:39:51,191 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c8bd0e0c0>)
+2025-04-04 07:39:51,191 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c8bd0e0c0>) completed
+2025-04-04 07:39:51,191 - aiosqlite - DEBUG - executing functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f9c8adf9990>)
+2025-04-04 07:39:51,191 - aiosqlite - DEBUG - operation functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f9c8adf9990>) completed
+2025-04-04 07:39:51,191 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-04 07:39:51,191 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c8adf9990>)
+2025-04-04 07:39:51,191 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c8adf9990>) completed
+2025-04-04 07:39:51,192 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c8ae3a7a0>
+2025-04-04 07:39:51,192 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c8ae3a7a0> completed
+2025-04-04 07:39:51,199 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9990>, '\n            CREATE TABLE IF NOT EXISTS ranks (\n                id INTEGER PRIMARY KEY,\n                name TEXT NOT NULL,\n                min_balance REAL DEFAULT 0,\n                features TEXT,\n                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n            )\n            ', [])
+2025-04-04 07:39:51,200 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9990>, '\n            CREATE TABLE IF NOT EXISTS ranks (\n                id INTEGER PRIMARY KEY,\n                name TEXT NOT NULL,\n                min_balance REAL DEFAULT 0,\n                features TEXT,\n                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n            )\n            ', []) completed
+2025-04-04 07:39:51,200 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9990>, 'PRAGMA table_info(users)', [])
+2025-04-04 07:39:51,200 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9990>, 'PRAGMA table_info(users)', []) completed
+2025-04-04 07:39:51,200 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c8bd0e140>)
+2025-04-04 07:39:51,200 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c8bd0e140>) completed
+2025-04-04 07:39:51,201 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9990>, 'SELECT id FROM ranks WHERE id = ?', (1,))
+2025-04-04 07:39:51,201 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9990>, 'SELECT id FROM ranks WHERE id = ?', (1,)) completed
+2025-04-04 07:39:51,201 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c8bd0e540>)
+2025-04-04 07:39:51,201 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c8bd0e540>) completed
+2025-04-04 07:39:51,214 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9990>, 'SELECT id FROM ranks WHERE id = ?', (2,))
+2025-04-04 07:39:51,214 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9990>, 'SELECT id FROM ranks WHERE id = ?', (2,)) completed
+2025-04-04 07:39:51,216 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c8bd0e140>)
+2025-04-04 07:39:51,216 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c8bd0e140>) completed
+2025-04-04 07:39:51,217 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9990>, 'SELECT id FROM ranks WHERE id = ?', (3,))
+2025-04-04 07:39:51,217 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9990>, 'SELECT id FROM ranks WHERE id = ?', (3,)) completed
+2025-04-04 07:39:51,218 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c8bd0e540>)
+2025-04-04 07:39:51,218 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c8bd0e540>) completed
+2025-04-04 07:39:51,218 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9990>, 'SELECT id FROM ranks WHERE id = ?', (4,))
+2025-04-04 07:39:51,218 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9990>, 'SELECT id FROM ranks WHERE id = ?', (4,)) completed
+2025-04-04 07:39:51,218 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c8bd0e140>)
+2025-04-04 07:39:51,218 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c8bd0e140>) completed
+2025-04-04 07:39:51,218 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9990>, 'SELECT id FROM ranks WHERE id = ?', (5,))
+2025-04-04 07:39:51,218 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adf9990>, 'SELECT id FROM ranks WHERE id = ?', (5,)) completed
+2025-04-04 07:39:51,219 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c8bd0e540>)
+2025-04-04 07:39:51,219 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c8bd0e540>) completed
+2025-04-04 07:39:51,219 - aiosqlite - DEBUG - executing functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f9c8adf9990>)
+2025-04-04 07:39:51,219 - aiosqlite - DEBUG - operation functools.partial(<built-in method commit of sqlite3.Connection object at 0x7f9c8adf9990>) completed
+2025-04-04 07:39:51,219 - smm_bot - INFO - تم تهيئة نظام الرتب بنجاح
+2025-04-04 07:39:51,219 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c8adf9990>)
+2025-04-04 07:39:51,219 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c8adf9990>) completed
+2025-04-04 07:39:51,219 - smm_bot - INFO - اكتملت تهيئة قاعدة البيانات
+2025-04-04 07:39:51,590 - smm_bot - INFO - بدء تشغيل البوت: @SmmDz_bot
+2025-04-04 07:39:51,591 - aiogram.dispatcher - INFO - Start polling
+2025-04-04 07:39:51,709 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-04 07:40:53,170 - smm_bot - INFO - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-04 07:40:53,171 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c8ae02020>
+2025-04-04 07:40:53,171 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c8ae02020> completed
+2025-04-04 07:40:53,171 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adfb5b0>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:40:53,172 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adfb5b0>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:40:53,173 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c8d0e01c0>)
+2025-04-04 07:40:53,173 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c8d0e01c0>) completed
+2025-04-04 07:40:53,173 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c8adfb5b0>)
+2025-04-04 07:40:53,173 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c8adfb5b0>) completed
+2025-04-04 07:40:53,174 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c8ee68b80>
+2025-04-04 07:40:53,174 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c8ee68b80> completed
+2025-04-04 07:40:53,174 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adfad40>, 'SELECT rank_id FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:40:53,174 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adfad40>, 'SELECT rank_id FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:40:53,175 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c8d0e01c0>)
+2025-04-04 07:40:53,175 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c8d0e01c0>) completed
+2025-04-04 07:40:53,175 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adfad40>, 'SELECT * FROM ranks WHERE id = ?', (5,))
+2025-04-04 07:40:53,175 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c8adfad40>, 'SELECT * FROM ranks WHERE id = ?', (5,)) completed
+2025-04-04 07:40:53,175 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c8d0e25c0>)
+2025-04-04 07:40:53,175 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c8d0e25c0>) completed
+2025-04-04 07:40:53,175 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c8adfad40>)
+2025-04-04 07:40:53,176 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c8adfad40>) completed
+2025-04-04 07:40:53,564 - aiogram.event - INFO - Update id=190429620 is handled. Duration 401 ms by bot id=7209041503
+2025-04-04 07:40:55,403 - smm_bot - INFO - تم تهيئة جلسة API
+2025-04-04 07:40:56,075 - smm_bot - INFO - تم استرجاع 1191 خدمة من API
+2025-04-04 07:40:56,256 - aiogram.event - INFO - Update id=190429621 is handled. Duration 858 ms by bot id=7209041503
+2025-04-04 07:40:58,008 - aiogram.event - INFO - Update id=190429622 is handled. Duration 221 ms by bot id=7209041503
+2025-04-04 07:40:59,623 - aiogram.event - INFO - Update id=190429623 is not handled. Duration 6 ms by bot id=7209041503
+2025-04-04 07:40:59,623 - aiogram.event - ERROR - Cause exception while process update id=190429623 by bot id=7209041503
+ValueError: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/user.py", line 264, in process_service_selection
+    service_text = format_service_info(selected_service)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/utils/common.py", line 259, in format_service_info
+    f"<b>💲 السعر:</b> ${format_money(rate)} {price_format}\n"
+                         ^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/utils/common.py", line 77, in format_money
+    return f"{amount:.2f}"
+           ^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+2025-04-04 07:41:05,218 - aiogram.event - INFO - Update id=190429624 is handled. Duration 184 ms by bot id=7209041503
+2025-04-04 07:41:07,416 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88a18a40>
+2025-04-04 07:41:07,416 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88a18a40> completed
+2025-04-04 07:41:07,416 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, '\n                SELECT \n                    o.id as id,\n                    o.order_id,\n                    o.service_id,\n                    o.service_name,\n                    o.link,\n                    o.quantity,\n                    o.amount,\n                    o.status,\n                    o.created_at,\n                    o.created_at as updated_at\n                FROM orders o\n                WHERE o.user_id = ?\n                ORDER BY o.created_at DESC\n            ', (5464520756,))
+2025-04-04 07:41:07,417 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, '\n                SELECT \n                    o.id as id,\n                    o.order_id,\n                    o.service_id,\n                    o.service_name,\n                    o.link,\n                    o.quantity,\n                    o.amount,\n                    o.status,\n                    o.created_at,\n                    o.created_at as updated_at\n                FROM orders o\n                WHERE o.user_id = ?\n                ORDER BY o.created_at DESC\n            ', (5464520756,)) completed
+2025-04-04 07:41:07,417 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c8acfe5c0>)
+2025-04-04 07:41:07,417 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c8acfe5c0>) completed
+2025-04-04 07:41:07,417 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT COUNT(*) as total FROM orders WHERE user_id = ?', (5464520756,))
+2025-04-04 07:41:07,417 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT COUNT(*) as total FROM orders WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:41:07,417 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c8acfc040>)
+2025-04-04 07:41:07,417 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c8acfc040>) completed
+2025-04-04 07:41:07,418 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57790>)
+2025-04-04 07:41:07,418 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57790>) completed
+2025-04-04 07:41:07,563 - aiogram.event - INFO - Update id=190429625 is handled. Duration 152 ms by bot id=7209041503
+2025-04-04 07:41:10,139 - aiogram.event - INFO - Update id=190429626 is handled. Duration 296 ms by bot id=7209041503
+2025-04-04 07:41:11,391 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88a18c20>
+2025-04-04 07:41:11,391 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88a18c20> completed
+2025-04-04 07:41:11,391 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:41:11,391 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:41:11,392 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88984940>)
+2025-04-04 07:41:11,392 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88984940>) completed
+2025-04-04 07:41:11,392 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57790>)
+2025-04-04 07:41:11,392 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57790>) completed
+2025-04-04 07:41:11,552 - aiogram.event - INFO - Update id=190429627 is handled. Duration 168 ms by bot id=7209041503
+2025-04-04 07:41:12,967 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88a18900>
+2025-04-04 07:41:12,967 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88a18900> completed
+2025-04-04 07:41:12,967 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT COUNT(*) as count FROM deposits WHERE user_id = ?', (5464520756,))
+2025-04-04 07:41:12,967 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT COUNT(*) as count FROM deposits WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:41:12,968 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88984bc0>)
+2025-04-04 07:41:12,968 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88984bc0>) completed
+2025-04-04 07:41:12,968 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, '\n            SELECT d.*\n            FROM deposits d\n            WHERE d.user_id = ?\n            ORDER BY d.created_at DESC\n        ', (5464520756,))
+2025-04-04 07:41:12,968 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, '\n            SELECT d.*\n            FROM deposits d\n            WHERE d.user_id = ?\n            ORDER BY d.created_at DESC\n        ', (5464520756,)) completed
+2025-04-04 07:41:12,968 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c88984c40>)
+2025-04-04 07:41:12,968 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c88984c40>) completed
+2025-04-04 07:41:12,969 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57790>)
+2025-04-04 07:41:12,969 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57790>) completed
+2025-04-04 07:41:13,132 - aiogram.event - INFO - Update id=190429628 is handled. Duration 173 ms by bot id=7209041503
+2025-04-04 07:41:15,339 - smm_bot - INFO - تم استرجاع 1191 خدمة من API
+2025-04-04 07:41:15,510 - aiogram.event - INFO - Update id=190429629 is handled. Duration 925 ms by bot id=7209041503
+2025-04-04 07:41:18,930 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-04 07:41:19,110 - aiogram.event - INFO - Update id=190429630 is handled. Duration 184 ms by bot id=7209041503
+2025-04-04 07:41:21,457 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-04 07:41:21,619 - aiogram.event - INFO - Update id=190429631 is handled. Duration 165 ms by bot id=7209041503
+2025-04-04 07:41:41,450 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa3600>
+2025-04-04 07:41:41,451 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa3600> completed
+2025-04-04 07:41:41,451 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:41:41,451 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:41:41,451 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89bb7b40>)
+2025-04-04 07:41:41,451 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89bb7b40>) completed
+2025-04-04 07:41:41,452 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57790>)
+2025-04-04 07:41:41,452 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57790>) completed
+2025-04-04 07:41:41,685 - aiogram.event - INFO - Update id=190429632 is handled. Duration 240 ms by bot id=7209041503
+2025-04-04 07:41:43,606 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-04 07:41:43,767 - aiogram.event - INFO - Update id=190429633 is handled. Duration 165 ms by bot id=7209041503
+2025-04-04 07:41:46,088 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-04 07:41:46,088 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa32e0>
+2025-04-04 07:41:46,089 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa32e0> completed
+2025-04-04 07:41:46,089 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57c40>, 'SELECT rank_id FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:41:46,089 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57c40>, 'SELECT rank_id FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:41:46,089 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3b640>)
+2025-04-04 07:41:46,089 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3b640>) completed
+2025-04-04 07:41:46,090 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57c40>, 'SELECT * FROM ranks WHERE id = ?', (5,))
+2025-04-04 07:41:46,090 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57c40>, 'SELECT * FROM ranks WHERE id = ?', (5,)) completed
+2025-04-04 07:41:46,090 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3b740>)
+2025-04-04 07:41:46,090 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3b740>) completed
+2025-04-04 07:41:46,090 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57c40>)
+2025-04-04 07:41:46,090 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57c40>) completed
+2025-04-04 07:41:46,234 - smm_bot - INFO - انتقال المشرف للوضع العادي: 5464520756
+2025-04-04 07:41:46,234 - aiogram.event - INFO - Update id=190429634 is handled. Duration 150 ms by bot id=7209041503
+2025-04-04 07:41:49,747 - aiogram.event - INFO - Update id=190429635 is handled. Duration 299 ms by bot id=7209041503
+2025-04-04 07:41:54,691 - smm_bot - INFO - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-04 07:41:54,691 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa34c0>
+2025-04-04 07:41:54,692 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa34c0> completed
+2025-04-04 07:41:54,692 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56f20>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:41:54,692 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56f20>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:41:54,692 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3a8c0>)
+2025-04-04 07:41:54,692 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3a8c0>) completed
+2025-04-04 07:41:54,692 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c56f20>)
+2025-04-04 07:41:54,693 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c56f20>) completed
+2025-04-04 07:41:54,693 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa3740>
+2025-04-04 07:41:54,693 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa3740> completed
+2025-04-04 07:41:54,693 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56f20>, 'SELECT rank_id FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:41:54,694 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56f20>, 'SELECT rank_id FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:41:54,694 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3a8c0>)
+2025-04-04 07:41:54,694 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3a8c0>) completed
+2025-04-04 07:41:54,694 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56f20>, 'SELECT * FROM ranks WHERE id = ?', (5,))
+2025-04-04 07:41:54,694 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56f20>, 'SELECT * FROM ranks WHERE id = ?', (5,)) completed
+2025-04-04 07:41:54,694 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3a9c0>)
+2025-04-04 07:41:54,695 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3a9c0>) completed
+2025-04-04 07:41:54,695 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c56f20>)
+2025-04-04 07:41:54,695 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c56f20>) completed
+2025-04-04 07:41:54,839 - aiogram.event - INFO - Update id=190429636 is handled. Duration 152 ms by bot id=7209041503
+2025-04-04 07:41:55,846 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-04 07:41:55,847 - smm_bot - INFO - دخول مشرف للوحة التحكم التفصيلية: 5464520756
+2025-04-04 07:41:55,991 - aiogram.event - INFO - Update id=190429637 is handled. Duration 145 ms by bot id=7209041503
+2025-04-04 07:41:58,323 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-04 07:41:58,323 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa3100>
+2025-04-04 07:41:58,324 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa3100> completed
+2025-04-04 07:41:58,324 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56a70>, 'SELECT * FROM users ORDER BY created_at DESC', [])
+2025-04-04 07:41:58,324 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56a70>, 'SELECT * FROM users ORDER BY created_at DESC', []) completed
+2025-04-04 07:41:58,324 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c89c3b4c0>)
+2025-04-04 07:41:58,324 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c89c3b4c0>) completed
+2025-04-04 07:41:58,325 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56a70>, 'SELECT COUNT(*) FROM users', [])
+2025-04-04 07:41:58,325 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56a70>, 'SELECT COUNT(*) FROM users', []) completed
+2025-04-04 07:41:58,325 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3aec0>)
+2025-04-04 07:41:58,325 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3aec0>) completed
+2025-04-04 07:41:58,325 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c56a70>)
+2025-04-04 07:41:58,325 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c56a70>) completed
+2025-04-04 07:41:58,326 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa3060>
+2025-04-04 07:41:58,326 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa3060> completed
+2025-04-04 07:41:58,326 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c576a0>, 'SELECT COUNT(*) as count FROM orders', [])
+2025-04-04 07:41:58,326 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c576a0>, 'SELECT COUNT(*) as count FROM orders', []) completed
+2025-04-04 07:41:58,327 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3b4c0>)
+2025-04-04 07:41:58,327 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3b4c0>) completed
+2025-04-04 07:41:58,327 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c576a0>, 'SELECT SUM(amount) as total FROM orders', [])
+2025-04-04 07:41:58,327 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c576a0>, 'SELECT SUM(amount) as total FROM orders', []) completed
+2025-04-04 07:41:58,327 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3abc0>)
+2025-04-04 07:41:58,327 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3abc0>) completed
+2025-04-04 07:41:58,327 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c576a0>, 'SELECT SUM(amount) as total FROM orders WHERE date(created_at) = ?', ('2025-04-04',))
+2025-04-04 07:41:58,328 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c576a0>, 'SELECT SUM(amount) as total FROM orders WHERE date(created_at) = ?', ('2025-04-04',)) completed
+2025-04-04 07:41:58,328 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3b4c0>)
+2025-04-04 07:41:58,328 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3b4c0>) completed
+2025-04-04 07:41:58,328 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c576a0>, 'SELECT SUM(amount) as total FROM orders WHERE date(created_at) >= ?', ('2025-03-31',))
+2025-04-04 07:41:58,328 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c576a0>, 'SELECT SUM(amount) as total FROM orders WHERE date(created_at) >= ?', ('2025-03-31',)) completed
+2025-04-04 07:41:58,328 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3abc0>)
+2025-04-04 07:41:58,328 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3abc0>) completed
+2025-04-04 07:41:58,329 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c576a0>, 'SELECT SUM(amount) as total FROM orders WHERE date(created_at) >= ?', ('2025-04-01',))
+2025-04-04 07:41:58,329 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c576a0>, 'SELECT SUM(amount) as total FROM orders WHERE date(created_at) >= ?', ('2025-04-01',)) completed
+2025-04-04 07:41:58,329 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3b4c0>)
+2025-04-04 07:41:58,329 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3b4c0>) completed
+2025-04-04 07:41:58,329 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c576a0>, 'SELECT SUM(amount) as total FROM orders WHERE date(created_at) >= ?', ('2025-01-01',))
+2025-04-04 07:41:58,329 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c576a0>, 'SELECT SUM(amount) as total FROM orders WHERE date(created_at) >= ?', ('2025-01-01',)) completed
+2025-04-04 07:41:58,329 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3abc0>)
+2025-04-04 07:41:58,330 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3abc0>) completed
+2025-04-04 07:41:58,330 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c576a0>)
+2025-04-04 07:41:58,330 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c576a0>) completed
+2025-04-04 07:41:58,330 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa3740>
+2025-04-04 07:41:58,330 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa3740> completed
+2025-04-04 07:41:58,331 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57c40>, "\n            SELECT COUNT(*) as count, SUM(amount) as total\n            FROM deposits\n            WHERE status = 'pending'\n            ", [])
+2025-04-04 07:41:58,331 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57c40>, "\n            SELECT COUNT(*) as count, SUM(amount) as total\n            FROM deposits\n            WHERE status = 'pending'\n            ", []) completed
+2025-04-04 07:41:58,331 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3abc0>)
+2025-04-04 07:41:58,331 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3abc0>) completed
+2025-04-04 07:41:58,331 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57c40>, "\n            SELECT COUNT(*) as count, SUM(amount) as total\n            FROM deposits\n            WHERE status = 'approved'\n            ", [])
+2025-04-04 07:41:58,331 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57c40>, "\n            SELECT COUNT(*) as count, SUM(amount) as total\n            FROM deposits\n            WHERE status = 'approved'\n            ", []) completed
+2025-04-04 07:41:58,332 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3b4c0>)
+2025-04-04 07:41:58,332 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3b4c0>) completed
+2025-04-04 07:41:58,332 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57c40>, "\n            SELECT COUNT(*) as count, SUM(amount) as total\n            FROM deposits\n            WHERE status = 'rejected'\n            ", [])
+2025-04-04 07:41:58,332 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57c40>, "\n            SELECT COUNT(*) as count, SUM(amount) as total\n            FROM deposits\n            WHERE status = 'rejected'\n            ", []) completed
+2025-04-04 07:41:58,332 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3abc0>)
+2025-04-04 07:41:58,332 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3abc0>) completed
+2025-04-04 07:41:58,332 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57c40>, '\n            SELECT COUNT(*) as count, SUM(amount) as total\n            FROM deposits\n            WHERE date(created_at) = ?\n            ', ('2025-04-04',))
+2025-04-04 07:41:58,332 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57c40>, '\n            SELECT COUNT(*) as count, SUM(amount) as total\n            FROM deposits\n            WHERE date(created_at) = ?\n            ', ('2025-04-04',)) completed
+2025-04-04 07:41:58,333 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3b4c0>)
+2025-04-04 07:41:58,333 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3b4c0>) completed
+2025-04-04 07:41:58,333 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57c40>)
+2025-04-04 07:41:58,333 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57c40>) completed
+2025-04-04 07:41:58,475 - aiogram.event - INFO - Update id=190429638 is handled. Duration 153 ms by bot id=7209041503
+2025-04-04 07:42:00,145 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-04 07:42:00,146 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa3600>
+2025-04-04 07:42:00,146 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa3600> completed
+2025-04-04 07:42:00,146 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56f20>, "\n            SELECT d.*, u.username, u.full_name\n            FROM deposits d\n            LEFT JOIN users u ON d.user_id = u.user_id\n            WHERE d.status = 'pending'\n            ORDER BY d.created_at DESC\n            ", [])
+2025-04-04 07:42:00,146 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56f20>, "\n            SELECT d.*, u.username, u.full_name\n            FROM deposits d\n            LEFT JOIN users u ON d.user_id = u.user_id\n            WHERE d.status = 'pending'\n            ORDER BY d.created_at DESC\n            ", []) completed
+2025-04-04 07:42:00,146 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c89c3b2c0>)
+2025-04-04 07:42:00,147 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c89c3b2c0>) completed
+2025-04-04 07:42:00,147 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56f20>, "SELECT COUNT(*) as count FROM deposits WHERE status = 'pending'", [])
+2025-04-04 07:42:00,147 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56f20>, "SELECT COUNT(*) as count FROM deposits WHERE status = 'pending'", []) completed
+2025-04-04 07:42:00,147 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3bd40>)
+2025-04-04 07:42:00,147 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c89c3bd40>) completed
+2025-04-04 07:42:00,147 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c56f20>)
+2025-04-04 07:42:00,147 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c56f20>) completed
+2025-04-04 07:42:00,322 - aiogram.event - INFO - Update id=190429639 is handled. Duration 180 ms by bot id=7209041503
+2025-04-04 07:42:01,655 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-04 07:42:01,656 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa3420>
+2025-04-04 07:42:01,656 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa3420> completed
+2025-04-04 07:42:01,656 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c54310>, 'SELECT * FROM ranks ORDER BY id ASC', [])
+2025-04-04 07:42:01,657 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c54310>, 'SELECT * FROM ranks ORDER BY id ASC', []) completed
+2025-04-04 07:42:01,657 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c89c3bb40>)
+2025-04-04 07:42:01,657 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c89c3bb40>) completed
+2025-04-04 07:42:01,657 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c54310>)
+2025-04-04 07:42:01,657 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c54310>) completed
+2025-04-04 07:42:01,657 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa31a0>
+2025-04-04 07:42:01,658 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa31a0> completed
+2025-04-04 07:42:01,658 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c54310>, 'SELECT * FROM ranks ORDER BY id ASC', [])
+2025-04-04 07:42:01,658 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c54310>, 'SELECT * FROM ranks ORDER BY id ASC', []) completed
+2025-04-04 07:42:01,658 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c89c3bb40>)
+2025-04-04 07:42:01,658 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c89c3bb40>) completed
+2025-04-04 07:42:01,658 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c54310>)
+2025-04-04 07:42:01,659 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c54310>) completed
+2025-04-04 07:42:01,808 - aiogram.event - INFO - Update id=190429640 is handled. Duration 157 ms by bot id=7209041503
+2025-04-04 07:42:03,982 - aiogram.event - INFO - Update id=190429641 is handled. Duration 508 ms by bot id=7209041503
+2025-04-04 07:42:05,238 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-04 07:42:05,239 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa2fc0>
+2025-04-04 07:42:05,239 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa2fc0> completed
+2025-04-04 07:42:05,239 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c576a0>, 'SELECT * FROM users ORDER BY created_at DESC', [])
+2025-04-04 07:42:05,239 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c576a0>, 'SELECT * FROM users ORDER BY created_at DESC', []) completed
+2025-04-04 07:42:05,239 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c88b5d5c0>)
+2025-04-04 07:42:05,239 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c88b5d5c0>) completed
+2025-04-04 07:42:05,239 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c576a0>, 'SELECT COUNT(*) FROM users', [])
+2025-04-04 07:42:05,240 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c576a0>, 'SELECT COUNT(*) FROM users', []) completed
+2025-04-04 07:42:05,240 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5d640>)
+2025-04-04 07:42:05,240 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5d640>) completed
+2025-04-04 07:42:05,240 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c576a0>)
+2025-04-04 07:42:05,240 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c576a0>) completed
+2025-04-04 07:42:05,386 - aiogram.event - INFO - Update id=190429642 is handled. Duration 149 ms by bot id=7209041503
+2025-04-04 07:42:06,867 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-04 07:42:07,010 - aiogram.event - INFO - Update id=190429643 is handled. Duration 143 ms by bot id=7209041503
+2025-04-04 07:42:08,642 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-04 07:42:08,803 - aiogram.event - INFO - Update id=190429644 is handled. Duration 162 ms by bot id=7209041503
+2025-04-04 07:42:10,210 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-04 07:42:10,423 - aiogram.event - INFO - Update id=190429645 is handled. Duration 216 ms by bot id=7209041503
+2025-04-04 07:42:12,503 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-04 07:42:12,664 - aiogram.event - INFO - Update id=190429646 is handled. Duration 165 ms by bot id=7209041503
+2025-04-04 07:42:15,114 - aiogram.event - INFO - Update id=190429647 is handled. Duration 167 ms by bot id=7209041503
+2025-04-04 07:42:18,190 - smm_bot - INFO - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-04 07:42:18,191 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa3560>
+2025-04-04 07:42:18,191 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa3560> completed
+2025-04-04 07:42:18,191 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57c40>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:42:18,191 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57c40>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:42:18,192 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5ef40>)
+2025-04-04 07:42:18,192 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5ef40>) completed
+2025-04-04 07:42:18,192 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57c40>)
+2025-04-04 07:42:18,192 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57c40>) completed
+2025-04-04 07:42:18,192 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa34c0>
+2025-04-04 07:42:18,192 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa34c0> completed
+2025-04-04 07:42:18,193 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57c40>, 'SELECT rank_id FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:42:18,193 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57c40>, 'SELECT rank_id FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:42:18,193 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5ef40>)
+2025-04-04 07:42:18,193 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5ef40>) completed
+2025-04-04 07:42:18,193 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57c40>, 'SELECT * FROM ranks WHERE id = ?', (5,))
+2025-04-04 07:42:18,193 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57c40>, 'SELECT * FROM ranks WHERE id = ?', (5,)) completed
+2025-04-04 07:42:18,194 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5f040>)
+2025-04-04 07:42:18,194 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5f040>) completed
+2025-04-04 07:42:18,194 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57c40>)
+2025-04-04 07:42:18,194 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57c40>) completed
+2025-04-04 07:42:18,341 - aiogram.event - INFO - Update id=190429648 is handled. Duration 155 ms by bot id=7209041503
+2025-04-04 07:42:19,940 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-04 07:42:19,940 - smm_bot - INFO - دخول مشرف للوحة التحكم التفصيلية: 5464520756
+2025-04-04 07:42:20,107 - aiogram.event - INFO - Update id=190429649 is handled. Duration 167 ms by bot id=7209041503
+2025-04-04 07:42:22,436 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-04 07:42:22,605 - aiogram.event - INFO - Update id=190429650 is handled. Duration 174 ms by bot id=7209041503
+2025-04-04 07:42:37,636 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by setWebhook request
+2025-04-04 07:42:37,636 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7209041503)
+2025-04-04 07:42:41,757 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:42:41,757 - aiogram.dispatcher - WARNING - Sleep for 1.357517 seconds and try again... (tryings = 1, bot id = 7209041503)
+2025-04-04 07:42:43,236 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:42:43,236 - aiogram.dispatcher - WARNING - Sleep for 1.834404 seconds and try again... (tryings = 2, bot id = 7209041503)
+2025-04-04 07:42:48,191 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:42:48,192 - aiogram.dispatcher - WARNING - Sleep for 2.315760 seconds and try again... (tryings = 3, bot id = 7209041503)
+2025-04-04 07:42:50,628 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:42:50,629 - aiogram.dispatcher - WARNING - Sleep for 3.020033 seconds and try again... (tryings = 4, bot id = 7209041503)
+2025-04-04 07:42:53,771 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:42:53,771 - aiogram.dispatcher - WARNING - Sleep for 3.940693 seconds and try again... (tryings = 5, bot id = 7209041503)
+2025-04-04 07:42:57,836 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:42:57,836 - aiogram.dispatcher - WARNING - Sleep for 5.085175 seconds and try again... (tryings = 6, bot id = 7209041503)
+2025-04-04 07:43:03,045 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:43:03,045 - aiogram.dispatcher - WARNING - Sleep for 5.026279 seconds and try again... (tryings = 7, bot id = 7209041503)
+2025-04-04 07:43:08,198 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:43:08,198 - aiogram.dispatcher - WARNING - Sleep for 4.884243 seconds and try again... (tryings = 8, bot id = 7209041503)
+2025-04-04 07:43:13,207 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:43:13,207 - aiogram.dispatcher - WARNING - Sleep for 4.909360 seconds and try again... (tryings = 9, bot id = 7209041503)
+2025-04-04 07:43:18,239 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:43:18,239 - aiogram.dispatcher - WARNING - Sleep for 5.143086 seconds and try again... (tryings = 10, bot id = 7209041503)
+2025-04-04 07:43:23,506 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:43:23,506 - aiogram.dispatcher - WARNING - Sleep for 5.027520 seconds and try again... (tryings = 11, bot id = 7209041503)
+2025-04-04 07:43:28,658 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:43:28,658 - aiogram.dispatcher - WARNING - Sleep for 4.999724 seconds and try again... (tryings = 12, bot id = 7209041503)
+2025-04-04 07:43:33,778 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:43:33,779 - aiogram.dispatcher - WARNING - Sleep for 5.060237 seconds and try again... (tryings = 13, bot id = 7209041503)
+2025-04-04 07:43:38,962 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:43:38,962 - aiogram.dispatcher - WARNING - Sleep for 4.842536 seconds and try again... (tryings = 14, bot id = 7209041503)
+2025-04-04 07:43:43,929 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:43:43,929 - aiogram.dispatcher - WARNING - Sleep for 5.041694 seconds and try again... (tryings = 15, bot id = 7209041503)
+2025-04-04 07:43:49,091 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:43:49,092 - aiogram.dispatcher - WARNING - Sleep for 5.187583 seconds and try again... (tryings = 16, bot id = 7209041503)
+2025-04-04 07:43:54,404 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:43:54,404 - aiogram.dispatcher - WARNING - Sleep for 4.848953 seconds and try again... (tryings = 17, bot id = 7209041503)
+2025-04-04 07:43:59,377 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:43:59,378 - aiogram.dispatcher - WARNING - Sleep for 5.061116 seconds and try again... (tryings = 18, bot id = 7209041503)
+2025-04-04 07:44:04,559 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:44:04,559 - aiogram.dispatcher - WARNING - Sleep for 4.944602 seconds and try again... (tryings = 19, bot id = 7209041503)
+2025-04-04 07:44:09,627 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:44:09,627 - aiogram.dispatcher - WARNING - Sleep for 5.116317 seconds and try again... (tryings = 20, bot id = 7209041503)
+2025-04-04 07:44:14,868 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:44:14,868 - aiogram.dispatcher - WARNING - Sleep for 4.958771 seconds and try again... (tryings = 21, bot id = 7209041503)
+2025-04-04 07:44:19,946 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:44:19,946 - aiogram.dispatcher - WARNING - Sleep for 4.841050 seconds and try again... (tryings = 22, bot id = 7209041503)
+2025-04-04 07:44:24,919 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:44:24,919 - aiogram.dispatcher - WARNING - Sleep for 5.101133 seconds and try again... (tryings = 23, bot id = 7209041503)
+2025-04-04 07:44:30,144 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:44:30,145 - aiogram.dispatcher - WARNING - Sleep for 4.832701 seconds and try again... (tryings = 24, bot id = 7209041503)
+2025-04-04 07:44:35,101 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:44:35,101 - aiogram.dispatcher - WARNING - Sleep for 4.932533 seconds and try again... (tryings = 25, bot id = 7209041503)
+2025-04-04 07:44:40,157 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:44:40,157 - aiogram.dispatcher - WARNING - Sleep for 5.029388 seconds and try again... (tryings = 26, bot id = 7209041503)
+2025-04-04 07:44:45,311 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:44:45,312 - aiogram.dispatcher - WARNING - Sleep for 5.138071 seconds and try again... (tryings = 27, bot id = 7209041503)
+2025-04-04 07:44:50,574 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:44:50,574 - aiogram.dispatcher - WARNING - Sleep for 4.997740 seconds and try again... (tryings = 28, bot id = 7209041503)
+2025-04-04 07:44:55,694 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:44:55,694 - aiogram.dispatcher - WARNING - Sleep for 4.871124 seconds and try again... (tryings = 29, bot id = 7209041503)
+2025-04-04 07:45:00,688 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:45:00,689 - aiogram.dispatcher - WARNING - Sleep for 4.885760 seconds and try again... (tryings = 30, bot id = 7209041503)
+2025-04-04 07:45:05,702 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:45:05,706 - aiogram.dispatcher - WARNING - Sleep for 4.970264 seconds and try again... (tryings = 31, bot id = 7209041503)
+2025-04-04 07:45:10,798 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:45:10,799 - aiogram.dispatcher - WARNING - Sleep for 4.984400 seconds and try again... (tryings = 32, bot id = 7209041503)
+2025-04-04 07:45:15,907 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:45:15,908 - aiogram.dispatcher - WARNING - Sleep for 4.933894 seconds and try again... (tryings = 33, bot id = 7209041503)
+2025-04-04 07:45:20,965 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:45:20,965 - aiogram.dispatcher - WARNING - Sleep for 5.003549 seconds and try again... (tryings = 34, bot id = 7209041503)
+2025-04-04 07:45:26,090 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:45:26,090 - aiogram.dispatcher - WARNING - Sleep for 5.045990 seconds and try again... (tryings = 35, bot id = 7209041503)
+2025-04-04 07:45:31,259 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:45:31,259 - aiogram.dispatcher - WARNING - Sleep for 4.910884 seconds and try again... (tryings = 36, bot id = 7209041503)
+2025-04-04 07:45:36,294 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:45:36,294 - aiogram.dispatcher - WARNING - Sleep for 5.153712 seconds and try again... (tryings = 37, bot id = 7209041503)
+2025-04-04 07:45:41,568 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:45:41,568 - aiogram.dispatcher - WARNING - Sleep for 4.931217 seconds and try again... (tryings = 38, bot id = 7209041503)
+2025-04-04 07:45:46,623 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:45:46,624 - aiogram.dispatcher - WARNING - Sleep for 5.126853 seconds and try again... (tryings = 39, bot id = 7209041503)
+2025-04-04 07:45:51,877 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:45:51,877 - aiogram.dispatcher - WARNING - Sleep for 5.040280 seconds and try again... (tryings = 40, bot id = 7209041503)
+2025-04-04 07:45:57,039 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:45:57,039 - aiogram.dispatcher - WARNING - Sleep for 4.933412 seconds and try again... (tryings = 41, bot id = 7209041503)
+2025-04-04 07:46:02,096 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:46:02,096 - aiogram.dispatcher - WARNING - Sleep for 5.178374 seconds and try again... (tryings = 42, bot id = 7209041503)
+2025-04-04 07:46:07,398 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:46:07,399 - aiogram.dispatcher - WARNING - Sleep for 5.005599 seconds and try again... (tryings = 43, bot id = 7209041503)
+2025-04-04 07:46:12,524 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2025-04-04 07:46:12,524 - aiogram.dispatcher - WARNING - Sleep for 4.848120 seconds and try again... (tryings = 44, bot id = 7209041503)
+2025-04-04 07:46:19,708 - aiogram.dispatcher - INFO - Connection established (tryings = 45, bot id = 7209041503)
+2025-04-04 07:46:19,716 - aiogram.event - INFO - Update id=190429657 is not handled. Duration 7 ms by bot id=7209041503
+2025-04-04 07:46:23,496 - smm_bot - INFO - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-04 07:46:23,496 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa34c0>
+2025-04-04 07:46:23,497 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa34c0> completed
+2025-04-04 07:46:23,497 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:46:23,497 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:46:23,497 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5f8c0>)
+2025-04-04 07:46:23,497 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5f8c0>) completed
+2025-04-04 07:46:23,498 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57790>)
+2025-04-04 07:46:23,498 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57790>) completed
+2025-04-04 07:46:23,498 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa2980>
+2025-04-04 07:46:23,498 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa2980> completed
+2025-04-04 07:46:23,498 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT rank_id FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:46:23,499 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT rank_id FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:46:23,499 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5f8c0>)
+2025-04-04 07:46:23,499 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5f8c0>) completed
+2025-04-04 07:46:23,499 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT * FROM ranks WHERE id = ?', (5,))
+2025-04-04 07:46:23,499 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT * FROM ranks WHERE id = ?', (5,)) completed
+2025-04-04 07:46:23,499 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5f9c0>)
+2025-04-04 07:46:23,500 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5f9c0>) completed
+2025-04-04 07:46:23,500 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57790>)
+2025-04-04 07:46:23,500 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57790>) completed
+2025-04-04 07:46:23,693 - aiogram.event - INFO - Update id=190429658 is handled. Duration 202 ms by bot id=7209041503
+2025-04-04 07:48:07,954 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa3380>
+2025-04-04 07:48:07,955 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa3380> completed
+2025-04-04 07:48:07,955 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:48:07,955 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:48:07,955 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5fb40>)
+2025-04-04 07:48:07,955 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5fb40>) completed
+2025-04-04 07:48:07,956 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57790>)
+2025-04-04 07:48:07,956 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57790>) completed
+2025-04-04 07:48:08,213 - aiogram.event - INFO - Update id=190429659 is handled. Duration 268 ms by bot id=7209041503
+2025-04-04 07:48:16,577 - smm_bot - INFO - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-04 07:48:16,577 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa2fc0>
+2025-04-04 07:48:16,578 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa2fc0> completed
+2025-04-04 07:48:16,578 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:48:16,578 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:48:16,578 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5fd40>)
+2025-04-04 07:48:16,578 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5fd40>) completed
+2025-04-04 07:48:16,578 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57790>)
+2025-04-04 07:48:16,579 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57790>) completed
+2025-04-04 07:48:16,579 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa28e0>
+2025-04-04 07:48:16,579 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa28e0> completed
+2025-04-04 07:48:16,579 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT rank_id FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:48:16,580 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT rank_id FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:48:16,580 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5fd40>)
+2025-04-04 07:48:16,580 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5fd40>) completed
+2025-04-04 07:48:16,580 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT * FROM ranks WHERE id = ?', (5,))
+2025-04-04 07:48:16,580 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57790>, 'SELECT * FROM ranks WHERE id = ?', (5,)) completed
+2025-04-04 07:48:16,580 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5fdc0>)
+2025-04-04 07:48:16,580 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88b5fdc0>) completed
+2025-04-04 07:48:16,581 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57790>)
+2025-04-04 07:48:16,581 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57790>) completed
+2025-04-04 07:48:16,728 - aiogram.event - INFO - Update id=190429660 is handled. Duration 155 ms by bot id=7209041503
+2025-04-04 07:48:17,999 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-04 07:48:17,999 - smm_bot - INFO - دخول مشرف للوحة التحكم التفصيلية: 5464520756
+2025-04-04 07:48:18,222 - aiogram.event - INFO - Update id=190429661 is handled. Duration 223 ms by bot id=7209041503
+2025-04-04 07:48:19,302 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-04 07:48:19,303 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa2840>
+2025-04-04 07:48:19,303 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa2840> completed
+2025-04-04 07:48:19,303 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56890>, "\n            SELECT d.*, u.username, u.full_name\n            FROM deposits d\n            LEFT JOIN users u ON d.user_id = u.user_id\n            WHERE d.status = 'pending'\n            ORDER BY d.created_at DESC\n            ", [])
+2025-04-04 07:48:19,303 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56890>, "\n            SELECT d.*, u.username, u.full_name\n            FROM deposits d\n            LEFT JOIN users u ON d.user_id = u.user_id\n            WHERE d.status = 'pending'\n            ORDER BY d.created_at DESC\n            ", []) completed
+2025-04-04 07:48:19,303 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c88a304c0>)
+2025-04-04 07:48:19,304 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x7f9c88a304c0>) completed
+2025-04-04 07:48:19,304 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56890>, "SELECT COUNT(*) as count FROM deposits WHERE status = 'pending'", [])
+2025-04-04 07:48:19,304 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56890>, "SELECT COUNT(*) as count FROM deposits WHERE status = 'pending'", []) completed
+2025-04-04 07:48:19,304 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88a305c0>)
+2025-04-04 07:48:19,304 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88a305c0>) completed
+2025-04-04 07:48:19,304 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c56890>)
+2025-04-04 07:48:19,304 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c56890>) completed
+2025-04-04 07:48:19,448 - aiogram.event - INFO - Update id=190429662 is handled. Duration 149 ms by bot id=7209041503
+2025-04-04 07:48:24,424 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-04 07:48:24,424 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa34c0>
+2025-04-04 07:48:24,425 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa34c0> completed
+2025-04-04 07:48:24,425 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56890>, 'SELECT rank_id FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:48:24,425 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56890>, 'SELECT rank_id FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:48:24,425 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88a30240>)
+2025-04-04 07:48:24,425 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88a30240>) completed
+2025-04-04 07:48:24,425 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56890>, 'SELECT * FROM ranks WHERE id = ?', (5,))
+2025-04-04 07:48:24,425 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c56890>, 'SELECT * FROM ranks WHERE id = ?', (5,)) completed
+2025-04-04 07:48:24,426 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88a303c0>)
+2025-04-04 07:48:24,426 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88a303c0>) completed
+2025-04-04 07:48:24,426 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c56890>)
+2025-04-04 07:48:24,426 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c56890>) completed
+2025-04-04 07:48:24,637 - smm_bot - INFO - انتقال المشرف للوضع العادي: 5464520756
+2025-04-04 07:48:24,637 - aiogram.event - INFO - Update id=190429663 is handled. Duration 218 ms by bot id=7209041503
+2025-04-04 07:48:26,041 - aiogram.event - INFO - Update id=190429664 is handled. Duration 213 ms by bot id=7209041503
+2025-04-04 07:48:27,901 - aiosqlite - DEBUG - executing <function connect.<locals>.connector at 0x7f9c88aa31a0>
+2025-04-04 07:48:27,901 - aiosqlite - DEBUG - operation <function connect.<locals>.connector at 0x7f9c88aa31a0> completed
+2025-04-04 07:48:27,902 - aiosqlite - DEBUG - executing functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57a60>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,))
+2025-04-04 07:48:27,902 - aiosqlite - DEBUG - operation functools.partial(<built-in method execute of sqlite3.Connection object at 0x7f9c89c57a60>, 'SELECT * FROM users WHERE user_id = ?', (5464520756,)) completed
+2025-04-04 07:48:27,902 - aiosqlite - DEBUG - executing functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88a31140>)
+2025-04-04 07:48:27,902 - aiosqlite - DEBUG - operation functools.partial(<built-in method fetchone of sqlite3.Cursor object at 0x7f9c88a31140>) completed
+2025-04-04 07:48:27,902 - aiosqlite - DEBUG - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57a60>)
+2025-04-04 07:48:27,902 - aiosqlite - DEBUG - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x7f9c89c57a60>) completed
+2025-04-04 07:48:28,116 - aiogram.event - INFO - Update id=190429665 is handled. Duration 222 ms by bot id=7209041503
+2025-04-04 08:08:30,743 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-04-04 08:08:30,743 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-04 08:08:30,743 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-04 08:08:30,994 - smm_bot - INFO - بدء تنظيف الموارد...
+2025-04-04 08:08:30,994 - smm_bot - INFO - تم إغلاق جلسة API
+2025-04-04 08:08:30,994 - smm_bot - INFO - تم إغلاق جلسة API
+2025-04-04 08:08:30,994 - smm_bot - INFO - تم إغلاق جلسة البوت
+2025-04-04 08:08:30,995 - smm_bot - INFO - اكتمل تنظيف الموارد

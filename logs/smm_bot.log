@@ -1,0 +1,323 @@
+2025-04-03 22:39:14,354 - smm_bot - INFO - بدء تهيئة قاعدة البيانات...
+2025-04-03 22:39:14,434 - smm_bot - INFO - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity']
+2025-04-03 22:39:14,495 - smm_bot - INFO - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 22:39:14,497 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 22:39:14,497 - smm_bot - INFO - اكتملت تهيئة قاعدة البيانات
+2025-04-03 22:39:14,888 - smm_bot - INFO - بدء تشغيل البوت: @SmmDz_bot
+2025-04-03 22:39:14,889 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 22:39:15,008 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 22:39:39,217 - smm_bot - INFO - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 22:39:39,523 - smm_bot - INFO - تم إنشاء مستخدم جديد: 5464520756, Garren_store
+2025-04-03 22:39:39,524 - smm_bot - INFO - تم إنشاء مستخدم جديد: 5464520756, Garren_store, Garren Store
+2025-04-03 22:39:39,525 - smm_bot - ERROR - خطأ في الحصول على رتبة المستخدم: no such column: rank_id
+2025-04-03 22:39:39,525 - aiogram.event - INFO - Update id=190429395 is not handled. Duration 312 ms by bot id=7209041503
+2025-04-03 22:39:39,525 - aiogram.event - ERROR - Cause exception while process update id=190429395 by bot id=7209041503
+AttributeError: module 'keyboards.reply' has no attribute 'get_admin_keyboard'
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/user.py", line 71, in cmd_start
+    keyboard = reply.get_admin_keyboard() if is_admin else reply.get_main_keyboard(user_rank.get("id", 5))
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'keyboards.reply' has no attribute 'get_admin_keyboard'
+2025-04-03 22:40:04,185 - smm_bot - INFO - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 22:40:04,187 - smm_bot - ERROR - خطأ في الحصول على رتبة المستخدم: no such column: rank_id
+2025-04-03 22:40:04,188 - aiogram.event - INFO - Update id=190429396 is not handled. Duration 6 ms by bot id=7209041503
+2025-04-03 22:40:04,188 - aiogram.event - ERROR - Cause exception while process update id=190429396 by bot id=7209041503
+AttributeError: module 'keyboards.reply' has no attribute 'get_admin_keyboard'
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/user.py", line 71, in cmd_start
+    keyboard = reply.get_admin_keyboard() if is_admin else reply.get_main_keyboard(user_rank.get("id", 5))
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'keyboards.reply' has no attribute 'get_admin_keyboard'
+2025-04-03 22:41:46,965 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-04-03 22:41:46,965 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 22:41:46,966 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-03 22:41:47,216 - smm_bot - INFO - بدء تنظيف الموارد...
+2025-04-03 22:41:47,219 - smm_bot - ERROR - خطأ أثناء إغلاق جلسة API: unexpected indent (api.py, line 226)
+2025-04-03 22:41:47,219 - smm_bot - INFO - تم إغلاق جلسة البوت
+2025-04-03 22:41:47,219 - smm_bot - INFO - اكتمل تنظيف الموارد
+2025-04-03 22:43:24,942 - smm_bot - INFO - بدء تهيئة قاعدة البيانات...
+2025-04-03 22:43:24,943 - smm_bot - INFO - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity']
+2025-04-03 22:43:24,945 - smm_bot - INFO - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 22:43:24,946 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 22:43:25,081 - smm_bot - INFO - اكتملت تهيئة قاعدة البيانات
+2025-04-03 22:43:25,448 - smm_bot - INFO - بدء تشغيل البوت: @SmmDz_bot
+2025-04-03 22:43:25,448 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 22:43:25,565 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 22:43:44,471 - smm_bot - INFO - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 22:43:44,865 - aiogram.event - INFO - Update id=190429397 is handled. Duration 401 ms by bot id=7209041503
+2025-04-03 22:43:56,356 - aiogram.event - INFO - Update id=190429398 is not handled. Duration 7 ms by bot id=7209041503
+2025-04-03 22:43:58,373 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 22:43:58,681 - aiogram.event - INFO - Update id=190429399 is handled. Duration 309 ms by bot id=7209041503
+2025-04-03 22:44:04,116 - aiogram.event - INFO - Update id=190429400 is not handled. Duration 5 ms by bot id=7209041503
+2025-04-03 22:44:06,717 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 22:44:06,870 - aiogram.event - INFO - Update id=190429401 is handled. Duration 153 ms by bot id=7209041503
+2025-04-03 22:44:08,887 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 22:44:08,887 - aiogram.event - INFO - Update id=190429402 is not handled. Duration 2 ms by bot id=7209041503
+2025-04-03 22:44:08,887 - aiogram.event - ERROR - Cause exception while process update id=190429402 by bot id=7209041503
+AttributeError: module 'keyboards.reply' has no attribute 'get_admin_keyboard'
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/admin.py", line 42, in admin_filter
+    return await handler(message, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/admin.py", line 1318, in process_global_notification
+    reply_markup=reply.get_admin_keyboard()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'keyboards.reply' has no attribute 'get_admin_keyboard'
+2025-04-03 22:44:12,493 - smm_bot - INFO - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 22:44:12,637 - aiogram.event - INFO - Update id=190429403 is handled. Duration 147 ms by bot id=7209041503
+2025-04-03 22:44:14,348 - aiogram.event - INFO - Update id=190429404 is not handled. Duration 6 ms by bot id=7209041503
+2025-04-03 22:44:19,954 - aiogram.event - INFO - Update id=190429405 is not handled. Duration 7 ms by bot id=7209041503
+2025-04-03 22:44:21,157 - aiogram.event - INFO - Update id=190429406 is not handled. Duration 5 ms by bot id=7209041503
+2025-04-03 22:44:26,397 - aiogram.event - INFO - Update id=190429407 is not handled. Duration 6 ms by bot id=7209041503
+2025-04-03 22:44:27,591 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 22:44:27,741 - aiogram.event - INFO - Update id=190429408 is handled. Duration 150 ms by bot id=7209041503
+2025-04-03 22:44:29,381 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 22:44:29,381 - aiogram.event - INFO - Update id=190429409 is not handled. Duration 3 ms by bot id=7209041503
+2025-04-03 22:44:29,381 - aiogram.event - ERROR - Cause exception while process update id=190429409 by bot id=7209041503
+AttributeError: module 'keyboards.reply' has no attribute 'get_admin_keyboard'
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/admin.py", line 42, in admin_filter
+    return await handler(message, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/handlers/admin.py", line 1318, in process_global_notification
+    reply_markup=reply.get_admin_keyboard()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'keyboards.reply' has no attribute 'get_admin_keyboard'
+2025-04-03 22:44:32,410 - smm_bot - INFO - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 22:44:32,558 - aiogram.event - INFO - Update id=190429410 is handled. Duration 152 ms by bot id=7209041503
+2025-04-03 22:44:33,957 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 22:44:34,262 - aiogram.event - INFO - Update id=190429411 is handled. Duration 305 ms by bot id=7209041503
+2025-04-03 22:46:04,846 - aiogram.event - INFO - Update id=190429412 is not handled. Duration 7 ms by bot id=7209041503
+2025-04-03 22:48:03,220 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-04-03 22:48:03,220 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 22:48:03,221 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-03 22:48:03,472 - smm_bot - INFO - بدء تنظيف الموارد...
+2025-04-03 22:48:03,475 - smm_bot - ERROR - خطأ أثناء إغلاق جلسة API: unexpected indent (api.py, line 226)
+2025-04-03 22:48:03,475 - smm_bot - INFO - تم إغلاق جلسة البوت
+2025-04-03 22:48:03,475 - smm_bot - INFO - اكتمل تنظيف الموارد
+2025-04-03 22:48:08,461 - smm_bot - INFO - بدء تهيئة قاعدة البيانات...
+2025-04-03 22:48:08,462 - smm_bot - INFO - أعمدة جدول المستخدمين: ['user_id', 'username', 'full_name', 'balance', 'created_at', 'last_activity', 'rank_id']
+2025-04-03 22:48:08,463 - smm_bot - INFO - تم تهيئة قاعدة البيانات بنجاح
+2025-04-03 22:48:08,464 - smm_bot - INFO - تم تهيئة جداول الإيداع بنجاح
+2025-04-03 22:48:08,465 - smm_bot - INFO - اكتملت تهيئة قاعدة البيانات
+2025-04-03 22:48:08,831 - smm_bot - INFO - بدء تشغيل البوت: @SmmDz_bot
+2025-04-03 22:48:08,832 - aiogram.dispatcher - INFO - Start polling
+2025-04-03 22:48:08,950 - aiogram.dispatcher - INFO - Run polling for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 22:48:27,736 - smm_bot - INFO - بدء تشغيل البوت بواسطة مشرف: 5464520756, Garren_store
+2025-04-03 22:48:28,150 - aiogram.event - INFO - Update id=190429413 is handled. Duration 417 ms by bot id=7209041503
+2025-04-03 22:48:30,348 - aiogram.event - INFO - Update id=190429414 is not handled. Duration 5 ms by bot id=7209041503
+2025-04-03 22:48:32,894 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 22:48:33,130 - aiogram.event - INFO - Update id=190429415 is handled. Duration 236 ms by bot id=7209041503
+2025-04-03 22:48:34,385 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 22:48:34,560 - aiogram.event - INFO - Update id=190429416 is handled. Duration 178 ms by bot id=7209041503
+2025-04-03 22:48:41,467 - aiogram.event - INFO - Update id=190429417 is not handled. Duration 6 ms by bot id=7209041503
+2025-04-03 22:48:43,390 - aiogram.event - INFO - Update id=190429418 is not handled. Duration 8 ms by bot id=7209041503
+2025-04-03 22:48:44,871 - aiogram.event - INFO - Update id=190429419 is not handled. Duration 9 ms by bot id=7209041503
+2025-04-03 22:48:46,140 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 22:48:46,305 - aiogram.event - INFO - Update id=190429420 is handled. Duration 166 ms by bot id=7209041503
+2025-04-03 22:48:48,568 - aiogram.event - INFO - Update id=190429421 is not handled. Duration 6 ms by bot id=7209041503
+2025-04-03 22:48:50,111 - aiogram.event - INFO - Update id=190429422 is not handled. Duration 6 ms by bot id=7209041503
+2025-04-03 22:48:51,133 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 22:48:51,289 - aiogram.event - INFO - Update id=190429423 is handled. Duration 157 ms by bot id=7209041503
+2025-04-03 22:48:52,263 - smm_bot - INFO - تم قبول رسالة من مشرف: 5464520756
+2025-04-03 22:48:52,531 - aiogram.event - INFO - Update id=190429424 is handled. Duration 270 ms by bot id=7209041503
+2025-04-03 22:48:54,642 - aiogram.event - INFO - Update id=190429425 is not handled. Duration 5 ms by bot id=7209041503
+2025-04-03 22:50:14,356 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-04-03 22:50:14,357 - aiogram.dispatcher - INFO - Polling stopped for bot @SmmDz_bot id=7209041503 - 'Garren Services Store'
+2025-04-03 22:50:14,357 - aiogram.dispatcher - INFO - Polling stopped
+2025-04-03 22:50:14,609 - smm_bot - INFO - بدء تنظيف الموارد...
+2025-04-03 22:50:14,612 - smm_bot - ERROR - خطأ أثناء إغلاق جلسة API: unexpected indent (api.py, line 226)
+2025-04-03 22:50:14,612 - smm_bot - INFO - تم إغلاق جلسة البوت
+2025-04-03 22:50:14,612 - smm_bot - INFO - اكتمل تنظيف الموارد

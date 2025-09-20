@@ -1,0 +1,122 @@
+Add order
+
+Default
+
+Parameters 	Description
+key 	Your API key
+action 	add
+service 	Service ID
+link 	Link to page
+quantity 	Needed quantity
+runs (optional) 	Runs to deliver
+interval (optional) 	Interval in minutes
+Example response
+
+{
+    "order": 23501
+}
+
+
+package
+
+Parameters 	Description
+key 	Your API key
+action 	add
+service 	Service ID
+link 	Link to page
+Example response
+
+{
+    "order": 23501
+}
+
+
+Custom Comments
+
+Parameters 	Description
+key 	Your API key
+action 	add
+service 	Service ID
+link 	Link to page
+comments 	Comments list separated by \r\n or \n
+Example response
+
+{
+    "order": 23501
+}
+
+
+Mentions Custom List
+
+Parameters 	Description
+key 	Your API key
+action 	add
+service 	Service ID
+link 	Link to page
+usernames 	Usernames list separated by \r\n or \n
+Example response
+
+{
+    "order": 23501
+}
+
+
+Mentions User Followers
+
+Parameters 	Description
+key 	Your API key
+action 	add
+service 	Service ID
+link 	Link to page
+quantity 	Needed quantity
+username 	URL to scrape followers from
+Example response
+
+{
+    "order": 23501
+}
+
+
+Custom Comments Package
+
+Parameters 	Description
+key 	Your API key
+action 	add
+service 	Service ID
+link 	Link to page
+comments 	Comments list separated by \r\n or \n
+Example response
+
+{
+    "order": 23501
+}
+
+Poll
+
+Parameters 	Description
+key 	Your API key
+action 	add
+service 	Service ID
+link 	Link to page
+quantity 	Needed quantity
+answer_number 	Answer number of the poll
+Example response
+
+{
+    "order": 23501
+}
+
+Invites From Groups
+
+Parameters 	Description
+key 	Your API key
+action 	add
+service 	Service ID
+link 	Link to page
+quantity 	Needed quantity
+groups 	Groups list separated by \r\n or \n
+Example response
+
+{
+    "order": 23501
+}
