@@ -538,6 +538,22 @@ async def get_user_orders(user_id: int, page: int = 1, per_page: int = 5) -> Tup
         logger.error(f"خطأ في استرجاع طلبات المستخدم: {e}")
         return [], 0
 
+async def handle_order_completion(user_id: int, order_id: str) -> None:
+    """دالة مركزية للتعامل مع اكتمال الطلبات وفحص ترقية الرتب"""
+    try:
+        from database.ranks import increment_user_purchases_and_check_rank
+        rank_result = await increment_user_purchases_and_check_rank(user_id)
+        
+        if rank_result.get("upgraded"):
+            old_rank = rank_result.get("old_rank", {})
+            new_rank = rank_result.get("new_rank", {})
+            purchases = rank_result.get("purchases", 0)
+            
+            logger.info(f"🎉 تمت ترقية المستخدم {user_id} من {old_rank.get('name', 'غير محدد')} "
+                       f"إلى {new_rank.get('name', 'غير محدد')} بعد {purchases} مشتريات مكتملة!")
+    except Exception as rank_error:
+        logger.error(f"خطأ في فحص ترقية الرتبة للمستخدم {user_id} عند اكتمال الطلب {order_id}: {rank_error}")
+
 async def update_order_status(order_id: str, status: str) -> bool:
     """
     تحديث حالة الطلب
@@ -554,6 +570,12 @@ async def update_order_status(order_id: str, status: str) -> bool:
             # تنظيف وتوحيد قيمة الحالة
             status = status.lower().strip().replace(" ", "_")
             
+            # الحصول على user_id والحالة الحالية قبل التحديث لاستخدامهما في فحص الترقية
+            cursor = await db.execute("SELECT user_id, status FROM orders WHERE order_id = ?", (order_id,))
+            order_row = await cursor.fetchone()
+            user_id = order_row[0] if order_row else None
+            current_status = order_row[1] if order_row else None
+            
             # تحديث الحالة
             await db.execute(
                 "UPDATE orders SET status = ?, updated_at = CURRENT_TIMESTAMP WHERE order_id = ?",
@@ -561,6 +583,11 @@ async def update_order_status(order_id: str, status: str) -> bool:
             )
             await db.commit()
             logger.info(f"تم تحديث حالة الطلب #{order_id} إلى: {status}")
+            
+            # فحص ترقية الرتبة فقط عند التحول لحالة مكتمل من حالة أخرى (لتجنب التكرار)
+            if status == "completed" and current_status != "completed" and user_id:
+                await handle_order_completion(user_id, order_id)
+            
             return True
     except Exception as e:
         logger.error(f"خطأ في تحديث حالة الطلب #{order_id}: {e}")
@@ -758,13 +785,14 @@ async def update_order_remains_simple(order_id: str, remains: int) -> bool:
                 await db.commit()
                 logger.info("تمت إضافة عمود remains إلى جدول orders")
             
-            # جلب حالة الطلب الحالية
+            # جلب حالة الطلب الحالية و user_id للاستخدام في فحص الترقية
             cursor = await db.execute(
-                "SELECT status FROM orders WHERE order_id = ?",
+                "SELECT status, user_id FROM orders WHERE order_id = ?",
                 (order_id_str,)
             )
-            status_row = await cursor.fetchone()
-            current_status = status_row[0] if status_row else None
+            order_row = await cursor.fetchone()
+            current_status = order_row[0] if order_row else None
+            user_id = order_row[1] if order_row else None
             
             logger.debug(f"حالة الطلب #{order_id_str} الحالية: {current_status}, الكمية المتبقية الجديدة: {remains_value}")
             
@@ -797,9 +825,17 @@ async def update_order_remains_simple(order_id: str, remains: int) -> bool:
                     (new_status, order_id_str)
                 )
                 logger.info(f"تم تحديث حالة الطلب #{order_id_str} من {current_status} إلى {new_status}")
+                
+                # سنقوم بفحص ترقية الرتبة بعد الcommit لضمان سلامة البيانات
+                rank_upgrade_needed = (new_status == "completed" and user_id)
             
             await db.commit()
             logger.info(f"تم تحديث الكمية المتبقية للطلب #{order_id_str} إلى: {remains_value}")
+            
+            # فحص ترقية الرتبة التلقائية بعد commit لضمان سلامة البيانات
+            if 'rank_upgrade_needed' in locals() and rank_upgrade_needed:
+                await handle_order_completion(user_id, order_id_str)
+            
             return True
     except Exception as e:
         logger.error(f"خطأ في تحديث الكمية المتبقية للطلب #{order_id}: {e}")

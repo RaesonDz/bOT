@@ -386,23 +386,62 @@ async def process_quantity_input(message: Message, state: FSMContext):
         )
         return
 
-    # حساب السعر بناءً على نوع الخدمة
+    # حساب السعر الأساسي بناءً على نوع الخدمة
     try:
         max_order_check = int(selected_service.get("max", 0)) if isinstance(selected_service.get("max"), str) else selected_service.get("max", 0)
         if max_order_check == 1:
             # إذا كان الحد الأقصى 1، فهذا يعني أن السعر للباقة
-            price = rate * quantity
+            base_price = rate * quantity
         else:
             # وإلا، فالسعر لكل 1000
-            price = (rate / 1000) * quantity
+            base_price = (rate / 1000) * quantity
     except (ValueError, TypeError) as e:
         # تسجيل الخطأ
         logger.error(f"خطأ في حساب السعر: {e}")
         # في حالة حدوث خطأ، نستخدم الحساب الافتراضي
-        price = (rate / 1000) * quantity if rate > 0 else 0
+        base_price = (rate / 1000) * quantity if rate > 0 else 0
 
-    # تخزين السعر
-    await state.update_data(price=price)
+    # تطبيق نظام خصومات الرتب
+    try:
+        # الحصول على رتبة المستخدم
+        from database.ranks import get_user_rank
+        from database.pricing import calculate_service_price
+        
+        user_rank = await get_user_rank(message.from_user.id)
+        user_rank_id = user_rank.get('id', 6)  # افتراضي: جديد
+        service_id = selected_service.get('service', 0)
+        
+        # حساب السعر النهائي مع الخصومات
+        pricing_result = await calculate_service_price(
+            service_id=service_id,
+            base_price=base_price,
+            user_rank_id=user_rank_id
+        )
+        
+        final_price = pricing_result['final_price']
+        rank_discount = pricing_result.get('rank_discount', 0.0)
+        
+        # تخزين بيانات السعر مع معلومات الخصم
+        await state.update_data(
+            price=final_price,
+            base_price=base_price,
+            rank_discount=rank_discount,
+            rank_name=pricing_result.get('rank_name', 'غير محدد'),
+            applied_rules=pricing_result.get('applied_rules', [])
+        )
+        
+        logger.info(f"تم تطبيق خصم رتبة {rank_discount}% للمستخدم {message.from_user.id} - السعر من {base_price} إلى {final_price}")
+        
+    except Exception as e:
+        logger.error(f"خطأ في تطبيق خصومات الرتب: {e}")
+        # في حالة الخطأ، استخدام السعر الأساسي بدون خصم
+        await state.update_data(
+            price=base_price,
+            base_price=base_price,
+            rank_discount=0.0,
+            rank_name='غير محدد',
+            applied_rules=[]
+        )
 
     # التأكد من وجود سجل للمستخدم إذا لم يكن موجودًا
     try:
@@ -453,14 +492,32 @@ async def process_quantity_input(message: Message, state: FSMContext):
     except (ValueError, TypeError):
         price_format = "لكل 1000"
 
+    # إعداد رسالة التأكيد مع معلومات الخصم
+    data_state = await state.get_data()
+    base_price = data_state.get('base_price', 0)
+    rank_discount = data_state.get('rank_discount', 0.0)
+    rank_name = data_state.get('rank_name', 'غير محدد')
+    price = data_state.get('price', 0)  # السعر النهائي بعد الخصم
+    
     confirmation_text = (
         f"📋 <b>تأكيد الطلب:</b>\n\n"
         f"🔹 <b>الخدمة:</b> {selected_service.get('name', 'غير محدد')}\n"
         f"🔗 <b>الرابط:</b> {data.get('link', 'غير محدد')}\n"
         f"🔢 <b>الكمية:</b> {quantity}\n"
         f"💸 <b>سعر الخدمة:</b> ${format_money(service_rate)} {price_format}\n"
-        f"💰 <b>إجمالي السعر:</b> ${format_money(price)}\n\n"
     )
+    
+    # إضافة معلومات الخصم إذا كان متوفراً
+    if rank_discount > 0:
+        savings = base_price - price
+        confirmation_text += (
+            f"💵 <b>السعر الأساسي:</b> ${format_money(base_price)}\n"
+            f"🎖️ <b>رتبتك:</b> {rank_name} ({rank_discount}% خصم)\n"
+            f"💳 <b>وفرت:</b> ${format_money(savings)}\n"
+            f"💰 <b>السعر النهائي:</b> ${format_money(price)}\n\n"
+        )
+    else:
+        confirmation_text += f"💰 <b>إجمالي السعر:</b> ${format_money(price)}\n\n"
 
     # التحقق من كفاية الرصيد
     if balance < price:

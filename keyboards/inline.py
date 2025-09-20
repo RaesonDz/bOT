@@ -67,18 +67,7 @@ def get_admin_panel_keyboard() -> InlineKeyboardMarkup:
     ]
     return InlineKeyboardMarkup(inline_keyboard=keyboard)
 
-def get_back_button(destination: str = "main_menu") -> InlineKeyboardMarkup:
-    """إنشاء زر العودة"""
-    return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="🔙 العودة", callback_data=destination)]
-    ])
 
-def get_cancel_keyboard() -> InlineKeyboardMarkup:
-    """لوحة مفاتيح الإلغاء بأزرار إنلاين"""
-    keyboard = [
-        [InlineKeyboardButton(text="❌ إلغاء", callback_data="cancel_action")]
-    ]
-    return InlineKeyboardMarkup(inline_keyboard=keyboard)
 
 def get_skip_keyboard() -> InlineKeyboardMarkup:
     """لوحة مفاتيح التخطي بأزرار إنلاين"""
@@ -276,8 +265,8 @@ async def get_ranks_management_keyboard() -> InlineKeyboardMarkup:
 
     # إضافة أزرار للرتب
     for rank in ranks:
-        rank_id = rank.get("id")
-        rank_name = rank.get("name")
+        rank_id = rank.get("id", 5)
+        rank_name = rank.get("name", "برونزي")
         emoji = get_rank_emoji(rank_id)
 
         keyboard.append([
@@ -345,8 +334,8 @@ async def get_user_rank_selection_keyboard(user_id: int) -> InlineKeyboardMarkup
 
     buttons = []
     for rank in ranks_sorted:
-        rank_id = rank.get("id")
-        rank_name = rank.get("name")
+        rank_id = rank.get("id", 5)
+        rank_name = rank.get("name", "برونزي")
         emoji = get_rank_emoji(rank_id)
         buttons.append([
             InlineKeyboardButton(text=f"{emoji} {rank_name}", callback_data=f"set_user_rank_{user_id}_{rank_id}")

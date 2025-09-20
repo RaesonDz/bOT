@@ -89,9 +89,15 @@ async def get_pricing_rules(scope: str = None, ref_id: int = None,
         return []
 
 async def calculate_service_price(service_id: int, base_price: float, 
-                                user_rank_id: int = 5, category_id: int = None) -> Dict[str, Any]:
-    """حساب السعر النهائي للخدمة حسب قواعد التسعير"""
+                                user_rank_id: int = 6, category_id: int = None) -> Dict[str, Any]:
+    """حساب السعر النهائي للخدمة حسب قواعد التسعير وخصومات الرتب"""
     try:
+        # أولاً، الحصول على خصم الرتبة من نظام الرتب الجديد
+        from database.ranks import get_rank_by_id
+        
+        rank_info = await get_rank_by_id(user_rank_id)
+        rank_discount = rank_info.get('discount_percentage', 0.0)
+        
         # الحصول على قواعد التسعير مع الأولوية
         # الأولوية: خدمة+رتبة > خدمة > فئة+رتبة > فئة > عام+رتبة > عام
         
@@ -99,6 +105,18 @@ async def calculate_service_price(service_id: int, base_price: float,
         applied_rules = []
         total_percentage = 0
         total_fixed_fee = 0
+        
+        # تطبيق خصم الرتبة أولاً
+        if rank_discount > 0:
+            # خصم الرتبة يُطبق كخصم (نسبة سالبة)
+            total_percentage -= rank_discount
+            applied_rules.append({
+                'id': f'rank_{user_rank_id}',
+                'name': f'خصم رتبة {rank_info.get("name", "غير محدد")}',
+                'scope': 'rank_discount',
+                'percentage': -rank_discount,
+                'fixed_fee': 0
+            })
         
         # البحث عن القواعد بترتيب الأولوية
         rule_priorities = [
@@ -145,7 +163,9 @@ async def calculate_service_price(service_id: int, base_price: float,
             'total_percentage': total_percentage,
             'total_fixed_fee': total_fixed_fee,
             'applied_rules': applied_rules,
-            'savings': base_price - final_price if final_price < base_price else 0
+            'savings': base_price - final_price if final_price < base_price else 0,
+            'rank_discount': rank_discount,
+            'rank_name': rank_info.get('name', 'غير محدد')
         }
         
         logger.debug(f"حساب سعر الخدمة {service_id}: {result}")
@@ -159,10 +179,12 @@ async def calculate_service_price(service_id: int, base_price: float,
             'total_percentage': 0,
             'total_fixed_fee': 0,
             'applied_rules': [],
-            'savings': 0
+            'savings': 0,
+            'rank_discount': 0.0,
+            'rank_name': 'غير محدد'
         }
 
-async def get_pricing_preview(user_rank_id: int = 5) -> Dict[str, Any]:
+async def get_pricing_preview(user_rank_id: int = 6) -> Dict[str, Any]:
     """معاينة التسعير لجميع الخدمات حسب رتبة المستخدم"""
     try:
         from database.services import get_services, get_categories

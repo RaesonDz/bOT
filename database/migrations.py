@@ -16,7 +16,7 @@ import config
 logger = logging.getLogger("smm_bot")
 
 # إصدار schema الحالي
-CURRENT_SCHEMA_VERSION = 4
+CURRENT_SCHEMA_VERSION = 5
 
 async def init_migrations_table():
     """تهيئة جدول migrations لتتبع إصدارات قاعدة البيانات"""
@@ -282,6 +282,129 @@ async def migration_v4_enhanced_deposits():
             logger.error(f"فشل في تطبيق migration 4: {e}")
             raise
 
+async def migration_v5_purchase_based_ranks():
+    """Migration 5: تحويل نظام الرتب إلى نظام معتمد على عدد المشتريات مع الخصومات التلقائية"""
+    async with aiosqlite.connect(config.DB_NAME) as db:
+        try:
+            # فحص الأعمدة الموجودة في جدول المستخدمين
+            cursor = await db.execute("PRAGMA table_info(users)")
+            columns = await cursor.fetchall()
+            column_names = [column[1] for column in columns]
+            
+            # إضافة عمود completed_purchases إذا لم يكن موجوداً
+            if "completed_purchases" not in column_names:
+                await db.execute("ALTER TABLE users ADD COLUMN completed_purchases INTEGER DEFAULT 0")
+                logger.info("تم إضافة عمود completed_purchases لجدول المستخدمين")
+            
+            # إضافة عمود rank_id إذا لم يكن موجوداً
+            if "rank_id" not in column_names:
+                await db.execute("ALTER TABLE users ADD COLUMN rank_id INTEGER DEFAULT 6")
+                logger.info("تم إضافة عمود rank_id لجدول المستخدمين")
+            
+            # تحديث عدد المشتريات المكتملة لجميع المستخدمين الحاليين
+            await db.execute("""
+                UPDATE users SET completed_purchases = (
+                    SELECT COUNT(*) FROM orders 
+                    WHERE orders.user_id = users.user_id 
+                    AND (orders.status = 'completed' OR orders.status = 'Completed')
+                )
+            """)
+            logger.info("تم تحديث عدد المشتريات المكتملة لجميع المستخدمين")
+            
+            # إعادة تصميم جدول الرتب ليدعم النظام الجديد
+            # التحقق من وجود جدول الرتب قبل إعادة التسمية
+            cursor = await db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='ranks'")
+            ranks_exists = await cursor.fetchone()
+            
+            await db.execute("DROP TABLE IF EXISTS ranks_old")
+            if ranks_exists:
+                await db.execute("ALTER TABLE ranks RENAME TO ranks_old")
+            
+            # إنشاء جدول الرتب الجديد
+            await db.execute('''
+            CREATE TABLE ranks (
+                id INTEGER PRIMARY KEY,
+                name TEXT NOT NULL,
+                emoji TEXT NOT NULL,
+                min_purchases INTEGER DEFAULT 0,
+                discount_percentage REAL DEFAULT 0,
+                features TEXT,
+                is_active BOOLEAN DEFAULT 1,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+            ''')
+            
+            # إدراج الرتب الجديدة حسب المتطلبات
+            ranks_data = [
+                (1, "VIP", "👑", 200, 5.0, "DISCOUNT,PRIORITY,SPECIAL_OFFER,ALL"),
+                (2, "ماسي", "💎", 100, 10.0, "DISCOUNT,PRIORITY,SPECIAL_OFFER"),
+                (3, "ذهبي", "🥇", 75, 15.0, "DISCOUNT,PRIORITY"),
+                (4, "فضي", "🥈", 50, 20.0, "DISCOUNT"),
+                (5, "برونزي", "🥉", 25, 0.0, ""),
+                (6, "جديد", "🆕", 0, 0.0, "")
+            ]
+            
+            for rank_id, name, emoji, min_purchases, discount, features in ranks_data:
+                await db.execute(
+                    """INSERT INTO ranks (id, name, emoji, min_purchases, discount_percentage, features) 
+                       VALUES (?, ?, ?, ?, ?, ?)""",
+                    (rank_id, name, emoji, min_purchases, discount, features)
+                )
+            
+            logger.info("تم إنشاء نظام الرتب الجديد المعتمد على عدد المشتريات")
+            
+            # تحديث رتب جميع المستخدمين حسب النظام الجديد
+            await update_all_users_ranks_by_purchases(db)
+            
+            # حذف الجدول القديم
+            await db.execute("DROP TABLE IF EXISTS ranks_old")
+            
+            # تسجيل المigration كمطبق
+            await db.execute(
+                "INSERT INTO schema_migrations (version, description) VALUES (?, ?)",
+                (5, "تحويل نظام الرتب إلى نظام معتمد على عدد المشتريات مع الخصومات التلقائية")
+            )
+            await db.commit()
+            logger.info("تم تطبيق migration 5: نظام الرتب الجديد المعتمد على المشتريات")
+        except Exception as e:
+            await db.rollback()
+            logger.error(f"فشل في تطبيق migration 5: {e}")
+            raise
+
+async def update_all_users_ranks_by_purchases(db):
+    """تحديث رتب جميع المستخدمين حسب عدد المشتريات المكتملة"""
+    try:
+        # الحصول على جميع المستخدمين مع عدد مشترياتهم
+        cursor = await db.execute("SELECT user_id, completed_purchases FROM users")
+        users = await cursor.fetchall()
+        
+        for user_id, purchases in users:
+            # تحديد الرتبة المناسبة حسب عدد المشتريات
+            new_rank_id = 6  # جديد (افتراضي)
+            
+            if purchases >= 200:
+                new_rank_id = 1  # VIP
+            elif purchases >= 100:
+                new_rank_id = 2  # ماسي
+            elif purchases >= 75:
+                new_rank_id = 3  # ذهبي
+            elif purchases >= 50:
+                new_rank_id = 4  # فضي
+            elif purchases >= 25:
+                new_rank_id = 5  # برونزي
+            
+            # تحديث رتبة المستخدم
+            await db.execute(
+                "UPDATE users SET rank_id = ? WHERE user_id = ?",
+                (new_rank_id, user_id)
+            )
+        
+        logger.info(f"تم تحديث رتب {len(users)} مستخدم حسب عدد المشتريات")
+    except Exception as e:
+        logger.error(f"خطأ في تحديث رتب المستخدمين: {e}")
+        raise
+
 async def run_migrations():
     """تشغيل جميع المigrations المطلوبة"""
     await init_migrations_table()
@@ -295,6 +418,7 @@ async def run_migrations():
         (2, migration_v2_pricing_rules),
         (3, migration_v3_crypto_system),
         (4, migration_v4_enhanced_deposits),
+        (5, migration_v5_purchase_based_ranks),
     ]
     
     for version, migration_func in migrations:

@@ -17,6 +17,7 @@ from database.core import (
     update_order_status,
     update_order_remains_simple
 )
+from database.ranks import increment_user_purchases_and_check_rank
 from services.api import (
     check_order_status,
     check_multiple_orders
